@@ -1,0 +1,47 @@
+﻿#Nav {height:46px; width:960px; margin: 0 auto; } 
+#Nav li {float:left; }
+#Nav li li {float:none;}
+#Nav li a{ color: #C5C5C5;font-size: 14px;}
+/* a hack for IE5.x and IE6 */
+#Nav li a li {float:left;}
+
+#Nav li a {display:block; float:left; color:#fff; height:46px; padding:0 20px 0 10px; line-height:46px; text-decoration:none; white-space:nowrap; }
+#Nav li ul li a {height:22px; line-height:22px; float:none; color: #7E7E7E}
+
+#Nav li:hover {position:relative; z-index:100;}
+#Nav a:hover {position:relative; z-index:100; color:#fff; text-decoration:underline;}
+#Nav li:hover > a { color:#fff;}
+
+#Nav :hover  ul {left:0; top:44px; z-index:300; border-left:1px solid #CCC;border-right:1px solid #CCC;}
+#Nav :hover  ul li {background:white; list-style: none; border-bottom:1px solid #CCC;}
+#Nav :hover  ul li a{color: #232323}
+#Nav :hover  ul li:hover {background:#e9e9e9;}
+#Nav :hover  ul li:hover a:hover{text-decoration:none; color:black;}
+#Nav a:hover ul {left:-1px;}
+
+#Nav ul {position:absolute; left:-9999px; top:-9999px;}
+
+/* it could have been this simple if all browsers understood */A
+/* show next level */
+#Nav li:hover li:hover > ul {left:0; margin-left:100%; top:0;}
+/* keep further levels hidden */
+#Nav li:hover > ul ul {position:absolute; left:-9999px; top:-9999px; width:auto;}
+/* show path followed */
+#Nav li:hover li:hover > a { color:#fff;}
+
+#Nav li a:hover ul li a:hover {text-decoration:underline;}
+
+/* but IE5.x and IE6 need this lot to style the flyouts*/
+/* show next level */
+#Nav a:hover a:hover ul,
+#Nav a:hover a:hover a:hover ul,
+#Nav a:hover a:hover a:hover a:hover ul,
+#Nav a:hover a:hover a:hover a:hover a:hover ul
+{left:100%; top:0;}
+
+/* keep further levels hidden */
+#Nav a:hover ul ul,
+#Nav a:hover a:hover ul ul,
+#Nav a:hover a:hover a:hover ul ul,
+#Nav a:hover a:hover a:hover a:hover ul ul
+{position:absolute; left:-9999px; top:-9999px;}

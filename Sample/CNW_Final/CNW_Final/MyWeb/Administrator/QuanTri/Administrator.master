@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Administrator.master.cs" Inherits="QuanTri_Administrator" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TCT mobile</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<form id="form1" runat="server">--%>
+    <div id="layout">
+        <div id="left">
+            <div id="Logo"></div>
+            <div id="GroupProduct">
+                <h5 class="hMenu">QUẢN LÍ</h5>
+                <ul id="ListProduct">
+                    <li><a href="QL_KhachHang.aspx">KHÁCH HÀNG</a></li>
+                    <li><a href="QL_KhachHang.aspx">KHÁCH HÀNG</a></li>
+                    <li><a href="QL_NhomSanPham.aspx">NHÓM SẢN PHẨM</a></li>
+                    <li><a href="QL_SanPham.aspx">SẢN PHẨM</a></li>
+                    <li><a href="QL_quangcao.aspx">QUẢNG CÁO</a></li>
+                    <li><a href="QL_HoaDon.aspx">HÓA ĐƠN</a></li>
+                    <li><a href="QL_ChiTietHoaDon.aspx">CHI TIẾT HÓA ĐƠN</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="header">
+                <div id="hcenter">
+                    <ul>
+                        <li><a href="#">TRANG CHỦ</a></li>
+                        <li><a href="#">GIỚI THIỆU</a></li>
+                        <li><a href="#">SẢN PHẨM</a></li>
+                        <li><a href="#">LIÊN HỆ</a></li>
+                        <li class="last"><a href="#">DỊCH VỤ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="fLeft">
+                <p>TCT mobile</p>
+                <p>
+                    Địa chỉ: 23-k3 - Nguyễn Phong Sắc - Cầu giấy - Hà Nội<br />
+                    Điện thoại: 012.3456789
+                </p>
+                <p>Email: <a href="mailto:PhamThuannsth@gmail.com">PhamThuannsth@gmail.com</a></p>
+            </div>
+            <p style="text-align: center;">Copyright (c) 2012 TCT Mobile</p>
+        </div>
+    </div>
+    <%--</form>--%>
+</body>
+</html>

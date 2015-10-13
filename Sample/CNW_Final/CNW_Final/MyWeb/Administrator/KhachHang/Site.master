@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="KhachHang_Site" %>
+<%@ Register Src="~/MuaHang/Modul/Menu.ascx" TagName="LoadMenu" TagPrefix="UC" %>
+<%@ Register Src="~/MuaHang/Modul/GroupProduct.ascx" TagName="LoadGroupProduct" TagPrefix="UC" %>
+<%@ Register Src="~/MuaHang/Modul/AdvertiseLeft.ascx" TagName="LoadAdversiteLeft" TagPrefix="UC" %>
+<%@ Register Src="~/MuaHang/Modul/SanPhamMoi.ascx" TagName="SanPhamMoi" TagPrefix="UC" %>
+<%@ Register Src="~/MuaHang/Modul/Login.ascx" TagName="GioHang" TagPrefix ="UC" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TCT Mobile</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <html>
+    <head>
+        <title>Học web chuẩn</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <div id="layout">
+            <div id="left">
+                <div id="logo">
+                    <img src="../Images/Logo.png" / width="178px" height="80px">
+                </div>
+                <div id="groupProduct">
+                    <div class="lTitle">
+                        <h5>NHÓM SẢN PHẨM</h5>
+                    </div>
+                    <div class="lContent">
+                        <UC:LoadGroupProduct runat="server" />
+                    </div>
+                </div>
+                <div id="lSearch">
+                    <div class="lTitle">
+                        <h5>TÌM KIẾM</h5>
+                    </div>
+                    <div id="lSearch_Content">
+                    </div>
+                </div>
+
+                <div id="lAdversite"">
+                    <div class="lTitle">
+                        <h5>QUẢNG CÁO</h5>
+                    </div>
+                    <div id="lAdversite_Content">
+                        <UC:LoadAdversiteLeft runat="server" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="right">
+                <div id="header">
+                    <div id="hcenter">
+                        <UC:LoadMenu runat="server" />
+                    </div>
+                    <div class="hRight">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>                  
+                        <%--<ul class="hButton">
+</ul>
+<div id="hSearch">
+    <ul class="Search">
+        <li>
+            <input name="Search" type="text" placeholder="search">
+        </li>
+        <li>
+            <button id="btnSearch"></button>
+        </li>
+    </ul>
+
+    <div class="bag">
+        <asp:Button ID="Button1" CssClass="btnBAG" runat="server" Text="Shopping Bag" OnClick="Button1_Click" />
+        <asp:TextBox CssClass="txtTotal" ID="txtTotalMoney" runat="server" Width="16px"></asp:TextBox>
+    </div>
+</div>
+                    </div>--%>
+                </div>
+                <div id="SideShow">
+                    <img src="../Images/PHT.png" />
+                </div>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="fLeft">
+                    <p>TCT mobile</p>
+                    <p>
+                        Địa chỉ: 23-k3 - Nguyễn Phong Sắc - Cầu giấy - Hà Nội<br />
+                        Điện thoại: 012.3456789
+                    </p>
+                    <p>Email: <a href="mailto:PhamThuannsth@gmail.com">PhamThuannsth@gmail.com</a></p>
+                </div>
+                <p style="text-align: center;">Copyright (c) 2012 TCT Mobile</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    </form>
+</body>
+</html>
