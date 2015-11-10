@@ -11,7 +11,43 @@
 	(object Attribute
 	    tool       	"Java"
 	    name       	"IDE"
-	    value      	"Internal Editor"))
+	    value      	"Internal Editor")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply3"
+	    value      	""))
     quid       	"5640A59A005E"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
@@ -93,8 +129,41 @@
 		    quid       	"5640B597024F")
 		(object State "$UNNAMED$5"
 		    quid       	"5640B62202A1"
-		    type       	"EndState"))
-	    partitions 	(list Partitions)
+		    type       	"EndState")
+		(object State "NewState"
+		    quid       	"56412F540203"
+		    type       	"Normal"))
+	    partitions 	(list Partitions
+		(object Partition "NewSwimlane"
+		    quid       	"56412F690213"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "Customer"
+		    quid       	"56412F800097"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "Screen_Seach"
+		    quid       	"56412FB7037D"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "GroupClothes"
+		    quid       	"56412FCC02B5"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "Clothes"
+		    quid       	"56412FDC0106"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "CSDL"
+		    quid       	"56412FE10137"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
 		(object State_Transition
@@ -278,24 +347,33 @@
 		    client     	"Logical View::State/Activity Model::hien thi ket qua"
 		    client_quidu 	"5640B597024F"
 		    sendEvent  	(object sendEvent
-			quid       	"5640B6290357")))
+			quid       	"5640B6290357"))
+		(object State_Transition
+		    quid       	"564137BA024B"
+		    supplier   	"Logical View::State/Activity Model::Nhap thong tin tim kiem"
+		    supplier_quidu 	"5640A60003B5"
+		    client     	"$UNNAMED$0"
+		    client_quidu 	"5640A5C003DE"
+		    sendEvent  	(object sendEvent
+			quid       	"564137BA024E")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
 		(object ActivityDiagram "TimKiem"
 		    quid       	"5640A5B00103"
 		    title      	"TimKiem"
-		    zoom       	100
+		    zoom       	65
 		    max_height 	28350
 		    max_width  	21600
 		    origin_x   	0
-		    origin_y   	662
+		    origin_y   	0
 		    items      	(list diagram_item_list
-			(object Swimlane "" @1
+			(object Swimlane "Customer" @1
 			    line_color 	3342489
-			    width      	450)
-			(object Label @2
+			    quidu      	"56412F800097"
+			    width      	500)
+			(object StateView "StartState" "$UNNAMED$0" @2
 			    Parent_View 	@1
-			    location   	(394, 49)
+			    location   	(252, 170)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -305,25 +383,9 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    nlines     	1
-			    max_width  	600
-			    justify    	1
-			    label      	"Customer")
-			(object StateView "StartState" "$UNNAMED$0" @3
-			    Parent_View 	@1
-			    location   	(473, 193)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object SegLabel @4
-				Parent_View 	@3
-				location   	(515, 163)
+			    label      	(object SegLabel @3
+				Parent_View 	@2
+				location   	(294, 140)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -345,9 +407,9 @@
 			    line_color 	3342489
 			    quidu      	"5640A5C003DE"
 			    autoResize 	TRUE)
-			(object ActivityStateView "Nhap thong tin tim kiem" @5
+			(object ActivityStateView "Nhap thong tin tim kiem" @4
 			    Parent_View 	@1
-			    location   	(472, 389)
+			    location   	(251, 338)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -358,8 +420,8 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@5
-				location   	(472, 392)
+				Parent_View 	@4
+				location   	(251, 341)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -374,73 +436,14 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object Label @6
-			    Parent_View 	@1
-			    location   	(2166, 50)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    nlines     	1
-			    max_width  	600
-			    justify    	1
-			    label      	"Clothes")
-			(object Label @7
-			    Parent_View 	@1
-			    location   	(2963, 50)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    nlines     	1
-			    max_width  	600
-			    justify    	1
-			    label      	"CSDL")
-			(object Label @8
-			    Parent_View 	@1
-			    location   	(1544, 50)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    nlines     	1
-			    max_width  	600
-			    justify    	1
-			    label      	"GroupClothes")
-			(object Label @9
-			    Parent_View 	@1
-			    location   	(960, 50)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    nlines     	1
-			    max_width  	600
-			    justify    	1
-			    label      	"Screen_Seach")
-			(object ActivityStateView "Xu ly thong tin tim kiem" @10
-			    Parent_View 	@1
-			    location   	(1072, 535)
+			(object Swimlane "Screen_Seach" @5
+			    location   	(500, 0)
+			    line_color 	3342489
+			    quidu      	"56412FB7037D"
+			    width      	510)
+			(object ActivityStateView "Xu ly thong tin tim kiem" @6
+			    Parent_View 	@5
+			    location   	(752, 519)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -451,8 +454,8 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@10
-				location   	(1072, 538)
+				Parent_View 	@6
+				location   	(752, 522)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -467,20 +470,71 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object TransView "" @11
+			(object TransView "" @7
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640AD8E035E"
-			    client     	@5
-			    supplier   	@10
+			    client     	@4
+			    supplier   	@6
 			    vertices   	(list Points
-				(627, 426)
-				(915, 496))
+				(394, 389)
+				(607, 466))
 			    line_style 	0
 			    x_offset   	FALSE)
+			(object ActivityStateView "hien thi ket qua" @8
+			    Parent_View 	@5
+			    location   	(763, 1941)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@8
+				location   	(763, 1944)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	269
+				justify    	0
+				label      	"hien thi ket qua")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5640B597024F"
+			    height     	106
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object StateView "EndState" "$UNNAMED$5" @9
+			    Parent_View 	@5
+			    location   	(762, 2180)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5640B62202A1"
+			    autoResize 	TRUE)
+			(object TransView "" @10
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5640B6290354"
+			    client     	@8
+			    supplier   	@9
+			    vertices   	(list Points
+				(762, 1993)
+				(762, 2138))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "GroupClothes" @11
+			    location   	(1010, 0)
+			    line_color 	3342489
+			    quidu      	"56412FCC02B5"
+			    width      	496)
 			(object ActivityStateView "Tim kiem theo nhom hang" @12
-			    Parent_View 	@1
-			    location   	(1637, 1219)
+			    Parent_View 	@11
+			    location   	(1259, 1000)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -492,7 +546,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@12
-				location   	(1637, 1222)
+				location   	(1259, 1003)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -506,71 +560,22 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object ActivityStateView "Tim kiem theo ten hang" @13
-			    Parent_View 	@1
-			    location   	(2100, 1212)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@13
-				location   	(2100, 1215)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	269
-				justify    	0
-				label      	"Tim kiem theo ten hang")
-			    icon_style 	"Icon"
+			(object Swimlane "Clothes" @13
+			    location   	(1506, 0)
 			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5640B23A03DB"
-			    height     	106
-			    annotation 	1
-			    autoResize 	TRUE)
-			(object ActivityStateView "Tim theo gia hang" @14
-			    Parent_View 	@1
-			    location   	(2547, 1210)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@14
-				location   	(2547, 1213)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	269
-				justify    	0
-				label      	"Tim theo gia hang")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5640B2500151"
-			    height     	106
-			    annotation 	1
-			    autoResize 	TRUE)
-			(object DecisionView "$UNNAMED$4" @15
-			    Parent_View 	@1
-			    location   	(2037, 799)
+			    quidu      	"56412FDC0106"
+			    width      	964)
+			(object DecisionView "$UNNAMED$4" @14
+			    Parent_View 	@13
+			    location   	(1753, 650)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
 			    quidu      	"5640B42F03E1"
+			    width      	169
+			    height     	138
 			    autoResize 	TRUE)
-			(object TransView "" @16
+			(object TransView "" @15
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -580,9 +585,9 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    label      	(object SegLabel @17
-				Parent_View 	@16
-				location   	(1856, 1010)
+			    label      	(object SegLabel @16
+				Parent_View 	@15
+				location   	(1524, 832)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -603,14 +608,27 @@
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B5DF02CA"
-			    client     	@15
+			    client     	@14
 			    supplier   	@12
 			    vertices   	(list Points
-				(1962, 799)
-				(1678, 1165))
+				(1669, 650)
+				(1321, 946))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object TransView "" @18
+			(object TransView "" @17
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5640B5D20050"
+			    client     	@6
+			    supplier   	@14
+			    vertices   	(list Points
+				(922, 541)
+				(1669, 650))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Tim kiem theo ten hang" @18
+			    Parent_View 	@13
+			    location   	(1754, 1000)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -620,9 +638,35 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    label      	(object SegLabel @19
+			    label      	(object ItemLabel
 				Parent_View 	@18
-				location   	(2108, 991)
+				location   	(1754, 1003)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	269
+				justify    	0
+				label      	"Tim kiem theo ten hang")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5640B23A03DB"
+			    height     	106
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @19
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(1798, 833)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -643,14 +687,16 @@
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B5E20346"
-			    client     	@15
-			    supplier   	@13
+			    client     	@14
+			    supplier   	@18
 			    vertices   	(list Points
-				(2037, 836)
-				(2091, 1158))
+				(1753, 719)
+				(1753, 947))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object TransView "" @20
+			(object ActivityStateView "Tim theo gia hang" @21
+			    Parent_View 	@13
+			    location   	(2223, 1000)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -660,9 +706,35 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    label      	(object SegLabel @21
-				Parent_View 	@20
-				location   	(2332, 946)
+			    label      	(object ItemLabel
+				Parent_View 	@21
+				location   	(2223, 1001)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	269
+				justify    	0
+				label      	"Tim theo gia hang")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5640B2500151"
+			    height     	106
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @22
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @23
+				Parent_View 	@22
+				location   	(2031, 766)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -683,16 +755,21 @@
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B5E6022E"
-			    client     	@15
-			    supplier   	@14
+			    client     	@14
+			    supplier   	@21
 			    vertices   	(list Points
-				(2112, 799)
-				(2490, 1157))
+				(1837, 650)
+				(2164, 946))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object ActivityStateView "Truy van hang theo nhom" @22
-			    Parent_View 	@1
-			    location   	(2882, 1516)
+			(object Swimlane "CSDL" @24
+			    location   	(2470, 0)
+			    line_color 	3342489
+			    quidu      	"56412FE10137"
+			    width      	1326)
+			(object ActivityStateView "Truy van hang theo nhom" @25
+			    Parent_View 	@24
+			    location   	(2717, 1431)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -703,8 +780,8 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@22
-				location   	(2882, 1519)
+				Parent_View 	@25
+				location   	(2717, 1432)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -718,20 +795,31 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object TransView "" @23
+			(object TransView "" @26
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B4DF00F4"
 			    client     	@12
-			    supplier   	@22
+			    supplier   	@25
 			    vertices   	(list Points
-				(1790, 1255)
-				(2728, 1479))
+				(1406, 1043)
+				(2569, 1387))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object ActivityStateView "Truy van hang theo ten" @24
-			    Parent_View 	@1
-			    location   	(3253, 1518)
+			(object TransView "" @27
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5640B5A30198"
+			    client     	@25
+			    supplier   	@8
+			    vertices   	(list Points
+				(2565, 1470)
+				(914, 1901))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Truy van hang theo ten" @28
+			    Parent_View 	@24
+			    location   	(3144, 1437)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -742,8 +830,8 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@24
-				location   	(3253, 1521)
+				Parent_View 	@28
+				location   	(3144, 1438)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -757,20 +845,31 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object TransView "" @25
+			(object TransView "" @29
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B4EC0058"
-			    client     	@13
-			    supplier   	@24
+			    client     	@18
+			    supplier   	@28
 			    vertices   	(list Points
-				(2251, 1252)
-				(3101, 1477))
+				(1900, 1045)
+				(2997, 1391))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object ActivityStateView "Truy van hang theo gia" @26
-			    Parent_View 	@1
-			    location   	(3630, 1516)
+			(object TransView "" @30
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5640B5A8037F"
+			    client     	@28
+			    supplier   	@8
+			    vertices   	(list Points
+				(2987, 1470)
+				(919, 1907))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Truy van hang theo gia" @31
+			    Parent_View 	@24
+			    location   	(3549, 1447)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -781,8 +880,8 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@26
-				location   	(3630, 1519)
+				Parent_View 	@31
+				location   	(3549, 1448)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -796,106 +895,41 @@
 			    height     	106
 			    annotation 	1
 			    autoResize 	TRUE)
-			(object TransView "" @27
+			(object TransView "" @32
 			    stereotype 	TRUE
 			    line_color 	3342489
 			    quidu      	"5640B4F00078"
-			    client     	@14
-			    supplier   	@26
+			    client     	@21
+			    supplier   	@31
 			    vertices   	(list Points
-				(2696, 1252)
-				(3480, 1473))
+				(2366, 1048)
+				(3405, 1398))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object ActivityStateView "hien thi ket qua" @28
-			    Parent_View 	@1
-			    location   	(1115, 2045)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@28
-				location   	(1115, 2048)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	269
-				justify    	0
-				label      	"hien thi ket qua")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5640B597024F"
-			    height     	106
-			    annotation 	1
-			    autoResize 	TRUE)
-			(object TransView "" @29
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5640B5A30198"
-			    client     	@22
-			    supplier   	@28
-			    vertices   	(list Points
-				(2734, 1560)
-				(1262, 2000))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object TransView "" @30
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5640B5A8037F"
-			    client     	@24
-			    supplier   	@28
-			    vertices   	(list Points
-				(3099, 1555)
-				(1268, 2007))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object TransView "" @31
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5640B5B80057"
-			    client     	@26
-			    supplier   	@28
-			    vertices   	(list Points
-				(3472, 1549)
-				(1272, 2011))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "EndState" "$UNNAMED$5" @32
-			    Parent_View 	@1
-			    location   	(1117, 2371)
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    quidu      	"5640B62202A1"
-			    autoResize 	TRUE)
 			(object TransView "" @33
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5640B6290354"
-			    client     	@28
-			    supplier   	@32
+			    quidu      	"5640B5B80057"
+			    client     	@31
+			    supplier   	@8
 			    vertices   	(list Points
-				(1115, 2098)
-				(1116, 2328))
+				(3387, 1475)
+				(924, 1912))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object TransView "" @34
+			(object Swimlane "" @34
+			    location   	(3796, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @35
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5640B5D20050"
-			    client     	@10
-			    supplier   	@15
+			    quidu      	"564137BA024B"
+			    client     	@2
+			    supplier   	@4
 			    vertices   	(list Points
-				(1247, 537)
-				(2026, 550)
-				(2037, 762))
+				(251, 200)
+				(251, 285))
 			    line_style 	0
 			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
