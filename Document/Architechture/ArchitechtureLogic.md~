@@ -75,43 +75,7 @@
 	(object Attribute
 	    tool       	"Data Modeler"
 	    name       	"StoredProcedureParameterCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName3"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText3"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply3"
-	    value      	""))
+	    value      	"0"))
     quid       	"5642DEAE03AC"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
@@ -252,27 +216,7 @@
 		quid       	"5642EB7B02C6"
 		stereotype 	"Subprogram Specification"
 		language   	"")
-	    (object module "Colors" "SubType" "Specification"
-		quid       	"564AADA2000B"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Size" "SubType" "Specification"
-		quid       	"564AADAE036C"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Sex" "SubType" "Specification"
-		quid       	"564AADB9010C"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Advertisement" "SubType" "Specification"
-		quid       	"564AADC8031A"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Shop" "SubType" "Specification"
-		quid       	"564AAE570271"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object SubSystem "Dat hang"
+	    (object SubSystem "DatHang"
 		quid       	"5642DF14027F"
 		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list
@@ -285,20 +229,16 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list))))
-	    (object SubSystem "Tim kiem"
+	    (object SubSystem "Seach"
 		quid       	"5642E7BD00BF"
 		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Dang nhap"
+	    (object SubSystem "Login"
 		quid       	"5642E89E035B"
 		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Dang ky"
+	    (object SubSystem "Manage Data"
 		quid       	"5642EB700057"
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Quan trin CSDL"
-		quid       	"564AAD430128"
 		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list)))
 	physical_presentations 	(list unit_reference_list
@@ -318,9 +258,9 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	1679
+		origin_y   	0
 		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Dat hang" @1
+		    (object SubSysView "Component View::DatHang" @1
 			location   	(1031, 606)
 			font       	(object Font
 			    size       	10
@@ -338,7 +278,7 @@
 			    nlines     	2
 			    max_width  	1438
 			    justify    	0
-			    label      	"Dat hang")
+			    label      	"DatHang")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
@@ -361,7 +301,7 @@
 			    location   	(381, 384)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	592
+			    max_width  	516
 			    justify    	1
 			    label      	"Customer")
 			icon       	"Subprogram Specification"
@@ -388,7 +328,7 @@
 			    location   	(928, 382)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	615
+			    max_width  	489
 			    justify    	1
 			    label      	"Clothes")
 			icon       	"Subprogram Specification"
@@ -415,7 +355,7 @@
 			    location   	(1201, 382)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	646
+			    max_width  	424
 			    justify    	1
 			    label      	"Bag")
 			icon       	"Subprogram Specification"
@@ -442,7 +382,7 @@
 			    location   	(1473, 382)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	660
+			    max_width  	448
 			    justify    	1
 			    label      	"Order")
 			icon       	"Subprogram Specification"
@@ -453,7 +393,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Tim kiem" @6
+		    (object SubSysView "Component View::Seach" @6
 			location   	(2933, 694)
 			font       	(object Font
 			    size       	10
@@ -471,7 +411,7 @@
 			    nlines     	2
 			    max_width  	1456
 			    justify    	0
-			    label      	"Tim kiem")
+			    label      	"Seach")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
@@ -521,7 +461,7 @@
 			    location   	(2919, 470)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	632
+			    max_width  	468
 			    justify    	1
 			    label      	"GroupClothes")
 			icon       	"Subprogram Specification"
@@ -548,7 +488,7 @@
 			    location   	(3205, 469)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	618
+			    max_width  	493
 			    justify    	1
 			    label      	"Clothes")
 			icon       	"Subprogram Specification"
@@ -575,7 +515,7 @@
 			    location   	(2343, 467)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	595
+			    max_width  	519
 			    justify    	1
 			    label      	"Customer")
 			icon       	"Subprogram Specification"
@@ -613,7 +553,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Dang nhap" @12
+		    (object SubSysView "Component View::Login" @12
 			location   	(1071, 1600)
 			font       	(object Font
 			    size       	10
@@ -631,7 +571,7 @@
 			    nlines     	2
 			    max_width  	1474
 			    justify    	0
-			    label      	"Dang nhap")
+			    label      	"Login")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
@@ -654,7 +594,7 @@
 			    location   	(778, 1357)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	598
+			    max_width  	523
 			    justify    	1
 			    label      	"Customer")
 			icon       	"Subprogram Specification"
@@ -692,7 +632,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Dang ky" @15
+		    (object SubSysView "Component View::Manage Data" @15
 			location   	(2665, 1618)
 			font       	(object Font
 			    size       	10
@@ -710,7 +650,7 @@
 			    nlines     	2
 			    max_width  	1474
 			    justify    	0
-			    label      	"Dang ky")
+			    label      	"Manage Data")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
@@ -733,7 +673,7 @@
 			    location   	(2378, 1443)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	601
+			    max_width  	527
 			    justify    	1
 			    label      	"Customer")
 			icon       	"Subprogram Specification"
@@ -760,7 +700,7 @@
 			    location   	(2665, 1443)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	674
+			    max_width  	513
 			    justify    	1
 			    label      	"Sales")
 			icon       	"Subprogram Specification"
@@ -768,328 +708,6 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5642EB7B02C6"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object SubSysView "Component View::Quan trin CSDL" @18
-			location   	(1134, 2596)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@18
-			    location   	(206, 2136)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1856
-			    justify    	0
-			    label      	"Quan trin CSDL")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AAD430128"
-			width      	1869
-			height     	932)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @19
-			location   	(491, 2487)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@19
-			    location   	(388, 2291)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	605
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @20
-			location   	(731, 2493)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@20
-			    location   	(628, 2297)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	622
-			    justify    	1
-			    label      	"Clothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF980390"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @21
-			location   	(987, 2496)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@21
-			    location   	(884, 2300)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	635
-			    justify    	1
-			    label      	"GroupClothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7E50125"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Bag" "SubType" "Specification" @22
-			location   	(1246, 2494)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@22
-			    location   	(1143, 2298)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	649
-			    justify    	1
-			    label      	"Bag")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFBB01E2"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Order" "SubType" "Specification" @23
-			location   	(1493, 2494)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@23
-			    location   	(1390, 2298)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	663
-			    justify    	1
-			    label      	"Order")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFF1037F"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Sales" "SubType" "Specification" @24
-			location   	(1743, 2495)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@24
-			    location   	(1640, 2299)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	677
-			    justify    	1
-			    label      	"Sales")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642EB7B02C6"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Colors" "SubType" "Specification" @25
-			location   	(481, 2871)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@25
-			    location   	(378, 2675)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	687
-			    justify    	1
-			    label      	"Colors")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADA2000B"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Size" "SubType" "Specification" @26
-			location   	(734, 2868)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@26
-			    location   	(631, 2672)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	697
-			    justify    	1
-			    label      	"Size")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADAE036C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Sex" "SubType" "Specification" @27
-			location   	(984, 2874)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@27
-			    location   	(881, 2678)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	708
-			    justify    	1
-			    label      	"Sex")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADB9010C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Advertisement" "SubType" "Specification" @28
-			location   	(1249, 2876)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@28
-			    location   	(1146, 2680)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	721
-			    justify    	1
-			    label      	"Advertisement")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADC8031A"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Shop" "SubType" "Specification" @29
-			location   	(1530, 2876)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@29
-			    location   	(1427, 2680)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	738
-			    justify    	1
-			    label      	"Shop")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AAE570271"
 			autoResize 	TRUE
 			width      	210
 			height     	312))))
