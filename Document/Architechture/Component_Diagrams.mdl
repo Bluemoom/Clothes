@@ -439,7 +439,7 @@
 		origin_y   	0
 		items      	(list diagram_item_list
 		    (object ProcessorView "Website" @10
-			location   	(1312, 752)
+			location   	(1184, 736)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -451,7 +451,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@10
-			    location   	(1111, 627)
+			    location   	(983, 611)
 			    nlines     	2
 			    max_width  	331
 			    justify    	0
@@ -463,7 +463,7 @@
 			height     	319
 			annotation 	0)
 		    (object ProcessorView "Database Server" @11
-			location   	(2128, 752)
+			location   	(2000, 736)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -475,7 +475,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@11
-			    location   	(1927, 624)
+			    location   	(1799, 608)
 			    nlines     	2
 			    max_width  	331
 			    justify    	0
@@ -487,7 +487,7 @@
 			height     	325
 			annotation 	0)
 		    (object ProcessorView "Client_PC" @12
-			location   	(576, 768)
+			location   	(448, 752)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -499,7 +499,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@12
-			    location   	(390, 653)
+			    location   	(262, 637)
 			    nlines     	2
 			    max_width  	300
 			    justify    	0
@@ -511,7 +511,7 @@
 			height     	300
 			annotation 	0)
 		    (object ProcessorView "Admin_PC" @13
-			location   	(1312, 208)
+			location   	(1184, 192)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -523,7 +523,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@13
-			    location   	(1127, 93)
+			    location   	(999, 77)
 			    nlines     	2
 			    max_width  	299
 			    justify    	0
@@ -541,8 +541,8 @@
 			client     	@11
 			supplier   	@10
 			vertices   	(list Points
-			    (1925, 752)
-			    (1484, 752))
+			    (1797, 736)
+			    (1356, 736))
 			line_style 	0)
 		    (object ConnectionView "" @15
 			stereotype 	TRUE
@@ -551,8 +551,8 @@
 			client     	@10
 			supplier   	@12
 			vertices   	(list Points
-			    (1109, 752)
-			    (732, 768))
+			    (981, 736)
+			    (604, 752))
 			line_style 	0)
 		    (object ConnectionView "" @16
 			stereotype 	TRUE
@@ -561,11 +561,11 @@
 			client     	@13
 			supplier   	@10
 			vertices   	(list Points
-			    (1312, 358)
-			    (1312, 608))
+			    (1184, 342)
+			    (1184, 592))
 			line_style 	0)
 		    (object Label @17
-			location   	(832, 688)
+			location   	(704, 672)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -580,7 +580,7 @@
 			justify    	1
 			label      	"TCP/IP")
 		    (object Label @18
-			location   	(1585, 672)
+			location   	(1456, 656)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -595,7 +595,7 @@
 			justify    	1
 			label      	"TCP/IP")
 		    (object Label @19
-			location   	(1360, 447)
+			location   	(1232, 432)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -608,7 +608,22 @@
 			nlines     	1
 			max_width  	600
 			justify    	1
-			label      	"TCP/IP")))))
+			label      	"TCP/IP")
+		    (object Label @20
+			location   	(1872, 912)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			nlines     	1
+			max_width  	600
+			justify    	1
+			label      	"Database")))))
     properties 	(object Properties
 	attributes 	(list Attribute_Set
 	    (object Attribute
