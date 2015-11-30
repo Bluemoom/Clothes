@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-   public class ConnectDB
+   public  class ConnectDB
     {
             public static SqlConnection connect;
 

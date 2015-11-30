@@ -13,6 +13,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="assets/js/jquery-1.11.1.min.js"></script>
+    <!-- Style cũ) -->
+    <link href="assets/Style/StyleChiTietSanPham.css" rel="stylesheet" />
+    <link href="assets/Style/StyleHienThiHangHoa.css" rel="stylesheet" />
 <!-- Custom Theme files -->
 <link href="assets/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -221,7 +224,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="arriv-top">
 			<div class="col-md-6 arriv-left">
-				<img src="images/1.jpg" class="img-responsive" alt=""> <!-- Load hinh anh tu database vao day-->
+				<img src="assets/images/1.jpg" class="img-responsive" alt=""> <!-- Load hinh anh tu database vao day-->
 				<div class="arriv-info">
 					<h3>MỘT NĂM BẢO HÀNH</h3>  <!-- Load tieu de tu database vao day-->
 					<p>CÓ GÌ ĐẶC BIỆT</p>  <!-- Load tieu de tu database vao day-->
@@ -231,7 +234,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="col-md-6 arriv-right">
-				<img src="images/2.jpg" class="img-responsive" alt="">
+				<img src="assets/images/2.jpg" class="img-responsive" alt="">
 				<div class="arriv-info">
 					<h3>THỬ GIÀY</h3>
 					<p>TẠI NHÀ</p>
@@ -269,7 +272,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="col-md-4 arriv-middle">
-				<img src=assets/images/6.jpg" class="img-responsive" alt="">
+				<img src="assets/images/6.jpg" class="img-responsive" alt="">
 				<div class="arriv-info3">
 					<h3>FRESH LOOK T-SHIRT</h3>
 					<div class="crt-btn">

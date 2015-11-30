@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +26,57 @@ namespace Data
             this.chonseClothes = _chonseClothes;
         }
 
-        public List<Clothes> showClothesByOptions()
+        public DataTable showClothesByOptions(int _c,string _ColorID, string _sizeID, string _pricemin,string _pricemax )
         {
-            List<Clothes> _list=null;
-            return _list;
+            ConnectDB db = new ConnectDB();
+            if (_c ==1)
+            {   
+                SqlParameter[] a = new SqlParameter[3];
+                a[0] = new SqlParameter("@Top", "");
+                a[1] = new SqlParameter("@where", "ColorID =" + _ColorID);
+                a[2] = new SqlParameter("@order", "[Order] Desc");
+                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+                return dt;
+            }
+            if(_c==2)
+            {
+                SqlParameter[] a = new SqlParameter[3];
+                a[0] = new SqlParameter("@Top", "");
+                a[1] = new SqlParameter("@where", "SizeID =" + _sizeID);
+                a[2] = new SqlParameter("@order", "[Order] Desc");
+                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+                return dt;
+            }
+            if(_c==3)
+            {
+                SqlParameter[] a = new SqlParameter[3];
+                a[0] = new SqlParameter("@Top", "");
+                a[1] = new SqlParameter("@where", "PriceOut >=" + _pricemin+" and PriceOut<="+_pricemax);
+                a[2] = new SqlParameter("@order", "[Order] Desc");
+                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+                return dt;
+            }
+            return null;
+        }
+        public DataTable showNewClothes(int _sl)
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[3];
+            a[0] = new SqlParameter("@Top", ""+_sl+"");
+            a[1] = new SqlParameter("@where", "status =1 and new = 1");
+            a[2] = new SqlParameter("@order", "[Order] Desc");
+            DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+            return dt;
+        }
+        public DataTable showClothesByGroup(string _groupID)
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[3];
+            a[0] = new SqlParameter("@Top", "");
+            a[1] = new SqlParameter("@where", "GroupClothesID ="+_groupID);
+            a[2] = new SqlParameter("@order", "[Order] Desc");
+            DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+            return dt;
         }
 
         public void showClothesByID(string _id)
