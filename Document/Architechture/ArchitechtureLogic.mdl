@@ -248,7 +248,7 @@
 		quid       	"5642E8A8006A"
 		stereotype 	"Subprogram Specification"
 		language   	"")
-	    (object module "Sales" "SubType" "Specification"
+	    (object module "Screen_Register" "SubType" "Specification"
 		quid       	"5642EB7B02C6"
 		stereotype 	"Subprogram Specification"
 		language   	"")
@@ -274,6 +274,12 @@
 		language   	"")
 	    (object SubSystem "Dat hang"
 		quid       	"5642DF14027F"
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"564AC0580177"
+			supplier   	"Component View::Quan tri co so du lieu"
+			quidu      	"564AC01A01F6"
+			supplier_is_subsystem 	TRUE))
 		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list
 		    (object Module_Diagram "Main"
@@ -296,32 +302,57 @@
 	    (object SubSystem "Dang ky"
 		quid       	"5642EB700057"
 		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
+		physical_presentations 	(list unit_reference_list
+		    (object Module_Diagram "Main"
+			quid       	"564AC0FD0281"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list))))
 	    (object SubSystem "Quan trin CSDL"
 		quid       	"564AAD430128"
 		physical_models 	(list unit_reference_list)
+		physical_presentations 	(list unit_reference_list))
+	    (object SubSystem "Dang ki"
+		quid       	"564AC0110050"
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"564AC09A03BA"
+			supplier   	"Component View::Quan tri co so du lieu"
+			quidu      	"564AC01A01F6"
+			supplier_is_subsystem 	TRUE))
+		physical_models 	(list unit_reference_list)
+		physical_presentations 	(list unit_reference_list))
+	    (object SubSystem "Quan tri co so du lieu"
+		quid       	"564AC01A01F6"
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"564AC0A8003C"
+			supplier   	"Component View::Tim kiem"
+			quidu      	"5642E7BD00BF"
+			supplier_is_subsystem 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"564AC0AC032A"
+			supplier   	"Component View::Dang nhap"
+			quidu      	"5642E89E035B"
+			supplier_is_subsystem 	TRUE))
+		physical_models 	(list unit_reference_list)
 		physical_presentations 	(list unit_reference_list)))
 	physical_presentations 	(list unit_reference_list
-	    (object Module_Diagram "Main"
+	    (object Module_Diagram "Bieu do goi"
 		quid       	"5642DEB801E9"
-		title      	"Main"
+		title      	"Bieu do goi"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list))
-	    (object Module_Diagram "NewDiagram"
-		quid       	"5642DF0A0375"
-		title      	"NewDiagram"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	1679
 		items      	(list diagram_item_list
 		    (object SubSysView "Component View::Dat hang" @1
-			location   	(1031, 606)
+			location   	(647, 503)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -333,6 +364,180 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
+			    location   	(503, 434)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Dat hang")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5642DF14027F"
+			width      	300
+			height     	150)
+		    (object SubSysView "Component View::Tim kiem" @2
+			location   	(2012, 1272)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1868, 1203)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Tim kiem")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5642E7BD00BF"
+			width      	300
+			height     	150)
+		    (object SubSysView "Component View::Dang nhap" @3
+			location   	(637, 1069)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(493, 1000)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Dang nhap")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5642E89E035B"
+			width      	300
+			height     	150)
+		    (object SubSysView "Component View::Dang ki" @4
+			location   	(1287, 1269)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1143, 1200)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Dang ki")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"564AC0110050"
+			width      	300
+			height     	150)
+		    (object SubSysView "Component View::Quan tri co so du lieu" @5
+			location   	(2053, 491)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1909, 422)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Quan tri co so du lieu")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"564AC01A01F6"
+			width      	300
+			height     	150)
+		    (object ModVisView "" @6
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"564AC0580177"
+			client     	@1
+			supplier   	@5
+			vertices   	(list Points
+			    (797, 501)
+			    (1902, 491))
+			line_style 	0)
+		    (object ModVisView "" @7
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"564AC09A03BA"
+			client     	@4
+			supplier   	@5
+			vertices   	(list Points
+			    (1412, 1139)
+			    (1978, 566))
+			line_style 	0)
+		    (object ModVisView "" @8
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"564AC0A8003C"
+			client     	@5
+			supplier   	@2
+			vertices   	(list Points
+			    (2047, 566)
+			    (2018, 1142))
+			line_style 	0)
+		    (object ModVisView "" @9
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"564AC0AC032A"
+			client     	@5
+			supplier   	@3
+			vertices   	(list Points
+			    (1902, 551)
+			    (787, 1006))
+			line_style 	0)))
+	    (object Module_Diagram "Bieu do lop"
+		quid       	"5642DF0A0375"
+		title      	"Bieu do lop"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	1678
+		items      	(list diagram_item_list
+		    (object SubSysView "Component View::Dat hang" @10
+			location   	(1031, 606)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
 			    location   	(312, 250)
 			    fill_color 	13434879
 			    nlines     	2
@@ -345,7 +550,7 @@
 			quidu      	"5642DF14027F"
 			width      	1450
 			height     	725)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @2
+		    (object ModView "Component View::Customer" "SubType" "Specification" @11
 			location   	(484, 580)
 			font       	(object Font
 			    size       	10
@@ -357,7 +562,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@2
+			    Parent_View 	@11
 			    location   	(381, 384)
 			    anchor_loc 	3
 			    nlines     	1
@@ -372,7 +577,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @3
+		    (object ModView "Component View::Clothes" "SubType" "Specification" @12
 			location   	(1031, 578)
 			font       	(object Font
 			    size       	10
@@ -384,7 +589,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@3
+			    Parent_View 	@12
 			    location   	(928, 382)
 			    anchor_loc 	3
 			    nlines     	1
@@ -399,7 +604,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Bag" "SubType" "Specification" @4
+		    (object ModView "Component View::Bag" "SubType" "Specification" @13
 			location   	(1304, 578)
 			font       	(object Font
 			    size       	10
@@ -411,7 +616,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@4
+			    Parent_View 	@13
 			    location   	(1201, 382)
 			    anchor_loc 	3
 			    nlines     	1
@@ -426,7 +631,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Order" "SubType" "Specification" @5
+		    (object ModView "Component View::Order" "SubType" "Specification" @14
 			location   	(1576, 578)
 			font       	(object Font
 			    size       	10
@@ -438,7 +643,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@5
+			    Parent_View 	@14
 			    location   	(1473, 382)
 			    anchor_loc 	3
 			    nlines     	1
@@ -453,7 +658,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Tim kiem" @6
+		    (object SubSysView "Component View::Tim kiem" @15
 			location   	(2933, 694)
 			font       	(object Font
 			    size       	10
@@ -465,7 +670,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@6
+			    Parent_View 	@15
 			    location   	(2205, 332)
 			    fill_color 	13434879
 			    nlines     	2
@@ -478,7 +683,7 @@
 			quidu      	"5642E7BD00BF"
 			width      	1469
 			height     	737)
-		    (object ModView "Component View::ScreenSeach" "SubType" "Specification" @7
+		    (object ModView "Component View::ScreenSeach" "SubType" "Specification" @16
 			location   	(2733, 666)
 			font       	(object Font
 			    size       	10
@@ -490,7 +695,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@7
+			    Parent_View 	@16
 			    location   	(2630, 470)
 			    anchor_loc 	3
 			    nlines     	1
@@ -505,7 +710,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @8
+		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @17
 			location   	(3022, 666)
 			font       	(object Font
 			    size       	10
@@ -517,7 +722,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@8
+			    Parent_View 	@17
 			    location   	(2919, 470)
 			    anchor_loc 	3
 			    nlines     	1
@@ -532,7 +737,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @9
+		    (object ModView "Component View::Clothes" "SubType" "Specification" @18
 			location   	(3308, 665)
 			font       	(object Font
 			    size       	10
@@ -544,7 +749,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@9
+			    Parent_View 	@18
 			    location   	(3205, 469)
 			    anchor_loc 	3
 			    nlines     	1
@@ -559,7 +764,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @10
+		    (object ModView "Component View::Customer" "SubType" "Specification" @19
 			location   	(2446, 663)
 			font       	(object Font
 			    size       	10
@@ -571,7 +776,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@10
+			    Parent_View 	@19
 			    location   	(2343, 467)
 			    anchor_loc 	3
 			    nlines     	1
@@ -586,7 +791,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::ScreenOrder" "SubType" "Specification" @11
+		    (object ModView "Component View::ScreenOrder" "SubType" "Specification" @20
 			location   	(756, 581)
 			font       	(object Font
 			    size       	10
@@ -598,7 +803,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@11
+			    Parent_View 	@20
 			    location   	(653, 385)
 			    anchor_loc 	3
 			    nlines     	1
@@ -613,7 +818,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Dang nhap" @12
+		    (object SubSysView "Component View::Dang nhap" @21
 			location   	(1071, 1600)
 			font       	(object Font
 			    size       	10
@@ -625,7 +830,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@12
+			    Parent_View 	@21
 			    location   	(334, 1234)
 			    fill_color 	13434879
 			    nlines     	2
@@ -638,7 +843,7 @@
 			quidu      	"5642E89E035B"
 			width      	1487
 			height     	744)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @13
+		    (object ModView "Component View::Customer" "SubType" "Specification" @22
 			location   	(881, 1553)
 			font       	(object Font
 			    size       	10
@@ -650,7 +855,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@13
+			    Parent_View 	@22
 			    location   	(778, 1357)
 			    anchor_loc 	3
 			    nlines     	1
@@ -665,7 +870,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::ScreenLogin" "SubType" "Specification" @14
+		    (object ModView "Component View::ScreenLogin" "SubType" "Specification" @23
 			location   	(1243, 1559)
 			font       	(object Font
 			    size       	10
@@ -677,7 +882,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@14
+			    Parent_View 	@23
 			    location   	(1140, 1363)
 			    anchor_loc 	3
 			    nlines     	1
@@ -692,7 +897,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Dang ky" @15
+		    (object SubSysView "Component View::Dang ky" @24
 			location   	(2665, 1618)
 			font       	(object Font
 			    size       	10
@@ -704,7 +909,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@15
+			    Parent_View 	@24
 			    location   	(1928, 1256)
 			    fill_color 	13434879
 			    nlines     	2
@@ -717,7 +922,7 @@
 			quidu      	"5642EB700057"
 			width      	1487
 			height     	737)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @16
+		    (object ModView "Component View::Customer" "SubType" "Specification" @25
 			location   	(2481, 1639)
 			font       	(object Font
 			    size       	10
@@ -729,7 +934,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@16
+			    Parent_View 	@25
 			    location   	(2378, 1443)
 			    anchor_loc 	3
 			    nlines     	1
@@ -744,8 +949,8 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Sales" "SubType" "Specification" @17
-			location   	(2768, 1639)
+		    (object ModView "Component View::Screen_Register" "SubType" "Specification" @26
+			location   	(2768, 1638)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -756,13 +961,13 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@17
-			    location   	(2665, 1443)
+			    Parent_View 	@26
+			    location   	(2665, 1442)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	674
+			    max_width  	680
 			    justify    	1
-			    label      	"Sales")
+			    label      	"Screen_Register")
 			icon       	"Subprogram Specification"
 			icon_style 	"Icon"
 			line_color 	3342489
@@ -771,7 +976,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object SubSysView "Component View::Quan trin CSDL" @18
+		    (object SubSysView "Component View::Quan trin CSDL" @27
 			location   	(1134, 2596)
 			font       	(object Font
 			    size       	10
@@ -783,7 +988,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@18
+			    Parent_View 	@27
 			    location   	(206, 2136)
 			    fill_color 	13434879
 			    nlines     	2
@@ -796,7 +1001,7 @@
 			quidu      	"564AAD430128"
 			width      	1869
 			height     	932)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @19
+		    (object ModView "Component View::Customer" "SubType" "Specification" @28
 			location   	(491, 2487)
 			font       	(object Font
 			    size       	10
@@ -808,7 +1013,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@19
+			    Parent_View 	@28
 			    location   	(388, 2291)
 			    anchor_loc 	3
 			    nlines     	1
@@ -823,7 +1028,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @20
+		    (object ModView "Component View::Clothes" "SubType" "Specification" @29
 			location   	(731, 2493)
 			font       	(object Font
 			    size       	10
@@ -835,7 +1040,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@20
+			    Parent_View 	@29
 			    location   	(628, 2297)
 			    anchor_loc 	3
 			    nlines     	1
@@ -850,7 +1055,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @21
+		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @30
 			location   	(987, 2496)
 			font       	(object Font
 			    size       	10
@@ -862,7 +1067,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@21
+			    Parent_View 	@30
 			    location   	(884, 2300)
 			    anchor_loc 	3
 			    nlines     	1
@@ -877,7 +1082,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Bag" "SubType" "Specification" @22
+		    (object ModView "Component View::Bag" "SubType" "Specification" @31
 			location   	(1246, 2494)
 			font       	(object Font
 			    size       	10
@@ -889,7 +1094,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@22
+			    Parent_View 	@31
 			    location   	(1143, 2298)
 			    anchor_loc 	3
 			    nlines     	1
@@ -904,7 +1109,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Order" "SubType" "Specification" @23
+		    (object ModView "Component View::Order" "SubType" "Specification" @32
 			location   	(1493, 2494)
 			font       	(object Font
 			    size       	10
@@ -916,7 +1121,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@23
+			    Parent_View 	@32
 			    location   	(1390, 2298)
 			    anchor_loc 	3
 			    nlines     	1
@@ -931,7 +1136,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Sales" "SubType" "Specification" @24
+		    (object ModView "Component View::Screen_Register" "SubType" "Specification" @33
 			location   	(1743, 2495)
 			font       	(object Font
 			    size       	10
@@ -943,13 +1148,13 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@24
+			    Parent_View 	@33
 			    location   	(1640, 2299)
 			    anchor_loc 	3
 			    nlines     	1
-			    max_width  	677
+			    max_width  	680
 			    justify    	1
-			    label      	"Sales")
+			    label      	"Screen_Register")
 			icon       	"Subprogram Specification"
 			icon_style 	"Icon"
 			line_color 	3342489
@@ -958,7 +1163,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Colors" "SubType" "Specification" @25
+		    (object ModView "Component View::Colors" "SubType" "Specification" @34
 			location   	(481, 2871)
 			font       	(object Font
 			    size       	10
@@ -970,7 +1175,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@25
+			    Parent_View 	@34
 			    location   	(378, 2675)
 			    anchor_loc 	3
 			    nlines     	1
@@ -985,7 +1190,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Size" "SubType" "Specification" @26
+		    (object ModView "Component View::Size" "SubType" "Specification" @35
 			location   	(734, 2868)
 			font       	(object Font
 			    size       	10
@@ -997,7 +1202,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@26
+			    Parent_View 	@35
 			    location   	(631, 2672)
 			    anchor_loc 	3
 			    nlines     	1
@@ -1012,7 +1217,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Sex" "SubType" "Specification" @27
+		    (object ModView "Component View::Sex" "SubType" "Specification" @36
 			location   	(984, 2874)
 			font       	(object Font
 			    size       	10
@@ -1024,7 +1229,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@27
+			    Parent_View 	@36
 			    location   	(881, 2678)
 			    anchor_loc 	3
 			    nlines     	1
@@ -1039,7 +1244,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Advertisement" "SubType" "Specification" @28
+		    (object ModView "Component View::Advertisement" "SubType" "Specification" @37
 			location   	(1249, 2876)
 			font       	(object Font
 			    size       	10
@@ -1051,7 +1256,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@28
+			    Parent_View 	@37
 			    location   	(1146, 2680)
 			    anchor_loc 	3
 			    nlines     	1
@@ -1066,7 +1271,7 @@
 			autoResize 	TRUE
 			width      	210
 			height     	312)
-		    (object ModView "Component View::Shop" "SubType" "Specification" @29
+		    (object ModView "Component View::Shop" "SubType" "Specification" @38
 			location   	(1530, 2876)
 			font       	(object Font
 			    size       	10
@@ -1078,7 +1283,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@29
+			    Parent_View 	@38
 			    location   	(1427, 2680)
 			    anchor_loc 	3
 			    nlines     	1

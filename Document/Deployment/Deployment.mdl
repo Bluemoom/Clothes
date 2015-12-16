@@ -11,108 +11,8 @@
 	(object Attribute
 	    tool       	"Java"
 	    name       	"IDE"
-	    value      	"Internal Editor")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"DatabaseCounter"
-	    value      	"1")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"DomainPackageCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"SchemaCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"DomainCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"TableCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"ViewCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"JoinCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"ColumnCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"TriggerCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"IndexCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"ConstraintCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"PrimaryKeyCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"ForeignKeyCounter"
-	    value      	0)
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"StoredProcedurePackageCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"StoredProcedureCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Data Modeler"
-	    name       	"StoredProcedureParameterCounter"
-	    value      	"0")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply1"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply2"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagName3"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagText3"
-	    value      	"")
-	(object Attribute
-	    tool       	"Java"
-	    name       	"UserDefineTagApply3"
-	    value      	""))
-    quid       	"5642DEAE03AC"
+	    value      	"Internal Editor"))
+    quid       	"564EC7540343"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
@@ -138,13 +38,13 @@
 	showClassOfObject 	TRUE
 	notation   	"Unified")
     root_usecase_package 	(object Class_Category "Use Case View"
-	quid       	"5642DEAE03AE"
+	quid       	"564EC7540345"
 	exportControl 	"Public"
 	global     	TRUE
 	logical_models 	(list unit_reference_list)
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
-		quid       	"5642DEB801EA"
+		quid       	"564EC75D0224"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
@@ -153,51 +53,15 @@
 		origin_y   	0
 		items      	(list diagram_item_list))))
     root_category 	(object Class_Category "Logical View"
-	quid       	"5642DEAE03AD"
+	quid       	"564EC7540344"
 	exportControl 	"Public"
 	global     	TRUE
 	subsystem  	"Component View"
-	quidu      	"5642DEAE03AF"
-	logical_models 	(list unit_reference_list
-	    (object Class_Category "Global Data Types"
-		attributes 	(list Attribute_Set
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"dmItem"
-			value      	TRUE)
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"IsRootDomainPackage"
-			value      	TRUE)
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"dmDomainPackage"
-			value      	"Data Modeler"))
-		quid       	"5642DF680342"
-		exportControl 	"Public"
-		logical_models 	(list unit_reference_list)
-		logical_presentations 	(list unit_reference_list))
-	    (object Class_Category "Schemas"
-		attributes 	(list Attribute_Set
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"dmItem"
-			value      	TRUE)
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"IsRootSchema"
-			value      	TRUE)
-		    (object Attribute
-			tool       	"Data Modeler"
-			name       	"dmSchema"
-			value      	"Data Modeler"))
-		quid       	"5642DF6803AF"
-		exportControl 	"Public"
-		logical_models 	(list unit_reference_list)
-		logical_presentations 	(list unit_reference_list)))
+	quidu      	"564EC7540346"
+	logical_models 	(list unit_reference_list)
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
-		quid       	"5642DEB80228"
+		quid       	"564EC75D023A"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
@@ -206,153 +70,63 @@
 		origin_y   	0
 		items      	(list diagram_item_list))))
     root_subsystem 	(object SubSystem "Component View"
-	quid       	"5642DEAE03AF"
+	quid       	"564EC7540346"
 	physical_models 	(list unit_reference_list
-	    (object module "NewPackageSpec" "PackageType" "Specification"
-		quid       	"5642DF24008B"
-		stereotype 	"Package Specification"
-		language   	"")
-	    (object module "Customer" "SubType" "Specification"
-		quid       	"5642DF2A037C"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Clothes" "SubType" "Specification"
-		quid       	"5642DF980390"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Bag" "SubType" "Specification"
-		quid       	"5642DFBB01E2"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Order" "SubType" "Specification"
-		quid       	"5642DFF1037F"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "ScreenSeach" "SubType" "Specification"
-		quid       	"5642E7CE00B4"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "GroupClothes" "SubType" "Specification"
-		quid       	"5642E7E50125"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "ScreenOrder" "SubType" "Specification"
-		quid       	"5642E8930049"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "ScreenLogin" "SubType" "Specification"
-		quid       	"5642E8A5003B"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "NewSubprogSpec4" "SubType" "Specification"
-		quid       	"5642E8A8006A"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Screen_Register" "SubType" "Specification"
-		quid       	"5642EB7B02C6"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Colors" "SubType" "Specification"
-		quid       	"564AADA2000B"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Size" "SubType" "Specification"
-		quid       	"564AADAE036C"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Sex" "SubType" "Specification"
-		quid       	"564AADB9010C"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Advertisement" "SubType" "Specification"
-		quid       	"564AADC8031A"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object module "Shop" "SubType" "Specification"
-		quid       	"564AAE570271"
-		stereotype 	"Subprogram Specification"
-		language   	"")
-	    (object SubSystem "Dat hang"
-		quid       	"5642DF14027F"
-		visible_modules 	(list dependency_list
-		    (object Module_Visibility_Relationship
-			quid       	"564AC0580177"
-			supplier   	"Component View::Quan tri co so du lieu"
-			quidu      	"564AC01A01F6"
-			supplier_is_subsystem 	TRUE))
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list
-		    (object Module_Diagram "Main"
-			quid       	"5642DF450280"
-			title      	"Main"
-			zoom       	100
-			max_height 	28350
-			max_width  	21600
-			origin_x   	0
-			origin_y   	0
-			items      	(list diagram_item_list))))
-	    (object SubSystem "Tim kiem"
-		quid       	"5642E7BD00BF"
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Dang nhap"
-		quid       	"5642E89E035B"
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Dang ky"
-		quid       	"5642EB700057"
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list
-		    (object Module_Diagram "Main"
-			quid       	"564AC0FD0281"
-			title      	"Main"
-			zoom       	100
-			max_height 	28350
-			max_width  	21600
-			origin_x   	0
-			origin_y   	0
-			items      	(list diagram_item_list))))
-	    (object SubSystem "Quan trin CSDL"
-		quid       	"564AAD430128"
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Dang ki"
-		quid       	"564AC0110050"
-		visible_modules 	(list dependency_list
-		    (object Module_Visibility_Relationship
-			quid       	"564AC09A03BA"
-			supplier   	"Component View::Quan tri co so du lieu"
-			quidu      	"564AC01A01F6"
-			supplier_is_subsystem 	TRUE))
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "Quan tri co so du lieu"
-		quid       	"564AC01A01F6"
-		visible_modules 	(list dependency_list
-		    (object Module_Visibility_Relationship
-			quid       	"564AC0A8003C"
-			supplier   	"Component View::Tim kiem"
-			quidu      	"5642E7BD00BF"
-			supplier_is_subsystem 	TRUE)
-		    (object Module_Visibility_Relationship
-			quid       	"564AC0AC032A"
-			supplier   	"Component View::Dang nhap"
-			quidu      	"5642E89E035B"
-			supplier_is_subsystem 	TRUE))
-		physical_models 	(list unit_reference_list)
-		physical_presentations 	(list unit_reference_list)))
+	    (object module "NewComponent" "NotAModuleType" "NotAModulePart"
+		quid       	"564EC7C90131"
+		stereotype 	""
+		language   	""))
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
-		quid       	"5642DEB801E9"
+		quid       	"564EC75D0223"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"564EC7540344")
+    process_structure 	(object Processes
+	quid       	"564EC7540347"
+	ProcsNDevs 	(list
+	    (object Processor "Customer -PC"
+		quid       	"564EC7E001C2"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Admin - PC"
+		quid       	"564EC7FC01C5"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Receptionist - PC"
+		quid       	"564EC81A032F"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Database Sever"
+		quid       	"564EC8470316"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "website"
+		quid       	"564EC945038E"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Process_Diagram "Deployment View"
+		quid       	"564EC7540349"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
 		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Dat hang" @1
-			location   	(647, 497)
+		    (object ProcessorView "Customer -PC" @1
+			location   	(281, 839)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -364,20 +138,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
-			    location   	(503, 428)
-			    fill_color 	13434879
+			    location   	(79, 711)
 			    nlines     	2
-			    max_width  	288
+			    max_width  	332
 			    justify    	0
-			    label      	"Dat hang")
+			    label      	"Customer -PC")
 			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF14027F"
-			width      	300
-			height     	150)
-		    (object SubSysView "Component View::Tim kiem" @2
-			location   	(2012, 1272)
+			quidu      	"564EC7E001C2"
+			width      	407
+			height     	325
+			annotation 	0)
+		    (object ProcessorView "Admin - PC" @2
+			location   	(1009, 1392)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -389,20 +162,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(1868, 1203)
-			    fill_color 	13434879
+			    location   	(805, 1264)
 			    nlines     	2
-			    max_width  	288
+			    max_width  	337
 			    justify    	0
-			    label      	"Tim kiem")
+			    label      	"Admin - PC")
 			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7BD00BF"
-			width      	300
-			height     	150)
-		    (object SubSysView "Component View::Dang nhap" @3
-			location   	(637, 1069)
+			quidu      	"564EC7FC01C5"
+			width      	412
+			height     	325
+			annotation 	0)
+		    (object ProcessorView "Receptionist - PC" @3
+			location   	(1826, 817)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -414,20 +186,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(493, 1000)
-			    fill_color 	13434879
+			    location   	(1628, 692)
 			    nlines     	2
-			    max_width  	288
+			    max_width  	325
 			    justify    	0
-			    label      	"Dang nhap")
+			    label      	"Receptionist - PC")
 			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E89E035B"
-			width      	300
-			height     	150)
-		    (object SubSysView "Component View::Dang ki" @4
-			location   	(1287, 1269)
+			quidu      	"564EC81A032F"
+			width      	400
+			height     	319
+			annotation 	0)
+		    (object ProcessorView "Database Sever" @4
+			location   	(1028, 248)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -439,20 +210,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@4
-			    location   	(1143, 1200)
-			    fill_color 	13434879
+			    location   	(833, 126)
 			    nlines     	2
-			    max_width  	288
+			    max_width  	319
 			    justify    	0
-			    label      	"Dang ki")
+			    label      	"Database Sever")
 			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AC0110050"
-			width      	300
-			height     	150)
-		    (object SubSysView "Component View::Quan tri co so du lieu" @5
-			location   	(2053, 491)
+			quidu      	"564EC8470316"
+			width      	394
+			height     	313
+			annotation 	0)
+		    (object ProcessorView "website" @5
+			location   	(997, 828)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -464,854 +234,17 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@5
-			    location   	(1909, 422)
-			    fill_color 	13434879
+			    location   	(799, 703)
 			    nlines     	2
-			    max_width  	288
+			    max_width  	325
 			    justify    	0
-			    label      	"Quan tri co so du lieu")
+			    label      	"website")
 			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AC01A01F6"
-			width      	300
-			height     	150)
-		    (object ModVisView "" @6
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"564AC0580177"
-			client     	@1
-			supplier   	@5
-			vertices   	(list Points
-			    (797, 496)
-			    (1902, 491))
-			line_style 	0)
-		    (object ModVisView "" @7
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"564AC09A03BA"
-			client     	@4
-			supplier   	@5
-			vertices   	(list Points
-			    (1412, 1139)
-			    (1978, 566))
-			line_style 	0)
-		    (object ModVisView "" @8
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"564AC0A8003C"
-			client     	@5
-			supplier   	@2
-			vertices   	(list Points
-			    (2047, 566)
-			    (2018, 1142))
-			line_style 	0)
-		    (object ModVisView "" @9
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"564AC0AC032A"
-			client     	@5
-			supplier   	@3
-			vertices   	(list Points
-			    (1902, 551)
-			    (787, 1006))
-			line_style 	0)))
-	    (object Module_Diagram "NewDiagram"
-		quid       	"5642DF0A0375"
-		title      	"NewDiagram"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	1678
-		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Dat hang" @10
-			location   	(1031, 606)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@10
-			    location   	(312, 250)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1438
-			    justify    	0
-			    label      	"Dat hang")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF14027F"
-			width      	1450
-			height     	725)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @11
-			location   	(484, 580)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@11
-			    location   	(381, 384)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	592
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @12
-			location   	(1031, 578)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@12
-			    location   	(928, 382)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	615
-			    justify    	1
-			    label      	"Clothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF980390"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Bag" "SubType" "Specification" @13
-			location   	(1304, 578)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@13
-			    location   	(1201, 382)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	646
-			    justify    	1
-			    label      	"Bag")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFBB01E2"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Order" "SubType" "Specification" @14
-			location   	(1576, 578)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@14
-			    location   	(1473, 382)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	660
-			    justify    	1
-			    label      	"Order")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFF1037F"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object SubSysView "Component View::Tim kiem" @15
-			location   	(2933, 694)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@15
-			    location   	(2205, 332)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1456
-			    justify    	0
-			    label      	"Tim kiem")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7BD00BF"
-			width      	1469
-			height     	737)
-		    (object ModView "Component View::ScreenSeach" "SubType" "Specification" @16
-			location   	(2733, 666)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@16
-			    location   	(2630, 470)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	472
-			    justify    	1
-			    label      	"ScreenSeach")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7CE00B4"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @17
-			location   	(3022, 666)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@17
-			    location   	(2919, 470)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	632
-			    justify    	1
-			    label      	"GroupClothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7E50125"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @18
-			location   	(3308, 665)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@18
-			    location   	(3205, 469)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	618
-			    justify    	1
-			    label      	"Clothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF980390"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @19
-			location   	(2446, 663)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@19
-			    location   	(2343, 467)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	595
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::ScreenOrder" "SubType" "Specification" @20
-			location   	(756, 581)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@20
-			    location   	(653, 385)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	482
-			    justify    	1
-			    label      	"ScreenOrder")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E8930049"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object SubSysView "Component View::Dang nhap" @21
-			location   	(1071, 1600)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@21
-			    location   	(334, 1234)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1474
-			    justify    	0
-			    label      	"Dang nhap")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E89E035B"
-			width      	1487
-			height     	744)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @22
-			location   	(881, 1553)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@22
-			    location   	(778, 1357)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	598
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::ScreenLogin" "SubType" "Specification" @23
-			location   	(1243, 1559)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@23
-			    location   	(1140, 1363)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	496
-			    justify    	1
-			    label      	"ScreenLogin")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E8A5003B"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object SubSysView "Component View::Dang ky" @24
-			location   	(2665, 1618)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@24
-			    location   	(1928, 1256)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1474
-			    justify    	0
-			    label      	"Dang ky")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642EB700057"
-			width      	1487
-			height     	737)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @25
-			location   	(2481, 1639)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@25
-			    location   	(2378, 1443)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	601
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Screen_Register" "SubType" "Specification" @26
-			location   	(2768, 1638)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@26
-			    location   	(2665, 1442)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	680
-			    justify    	1
-			    label      	"Screen_Register")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642EB7B02C6"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object SubSysView "Component View::Quan trin CSDL" @27
-			location   	(1134, 2596)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@27
-			    location   	(206, 2136)
-			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	1856
-			    justify    	0
-			    label      	"Quan trin CSDL")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AAD430128"
-			width      	1869
-			height     	932)
-		    (object ModView "Component View::Customer" "SubType" "Specification" @28
-			location   	(491, 2487)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@28
-			    location   	(388, 2291)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	605
-			    justify    	1
-			    label      	"Customer")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF2A037C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Clothes" "SubType" "Specification" @29
-			location   	(731, 2493)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@29
-			    location   	(628, 2297)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	622
-			    justify    	1
-			    label      	"Clothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DF980390"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::GroupClothes" "SubType" "Specification" @30
-			location   	(987, 2496)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@30
-			    location   	(884, 2300)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	635
-			    justify    	1
-			    label      	"GroupClothes")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642E7E50125"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Bag" "SubType" "Specification" @31
-			location   	(1246, 2494)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@31
-			    location   	(1143, 2298)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	649
-			    justify    	1
-			    label      	"Bag")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFBB01E2"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Order" "SubType" "Specification" @32
-			location   	(1493, 2494)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@32
-			    location   	(1390, 2298)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	663
-			    justify    	1
-			    label      	"Order")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642DFF1037F"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Screen_Register" "SubType" "Specification" @33
-			location   	(1743, 2495)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@33
-			    location   	(1640, 2299)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	680
-			    justify    	1
-			    label      	"Screen_Register")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5642EB7B02C6"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Colors" "SubType" "Specification" @34
-			location   	(481, 2871)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@34
-			    location   	(378, 2675)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	687
-			    justify    	1
-			    label      	"Colors")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADA2000B"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Size" "SubType" "Specification" @35
-			location   	(734, 2868)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@35
-			    location   	(631, 2672)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	697
-			    justify    	1
-			    label      	"Size")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADAE036C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Sex" "SubType" "Specification" @36
-			location   	(984, 2874)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@36
-			    location   	(881, 2678)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	708
-			    justify    	1
-			    label      	"Sex")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADB9010C"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Advertisement" "SubType" "Specification" @37
-			location   	(1249, 2876)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@37
-			    location   	(1146, 2680)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	721
-			    justify    	1
-			    label      	"Advertisement")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AADC8031A"
-			autoResize 	TRUE
-			width      	210
-			height     	312)
-		    (object ModView "Component View::Shop" "SubType" "Specification" @38
-			location   	(1530, 2876)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@38
-			    location   	(1427, 2680)
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	738
-			    justify    	1
-			    label      	"Shop")
-			icon       	"Subprogram Specification"
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"564AAE570271"
-			autoResize 	TRUE
-			width      	210
-			height     	312))))
-	category   	"Logical View"
-	quidu      	"5642DEAE03AD")
-    process_structure 	(object Processes
-	quid       	"5642DEAE03B0"
-	ProcsNDevs 	(list
-	    (object Process_Diagram "Deployment View"
-		quid       	"5642DEAE03B2"
-		title      	"Deployment View"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list))))
+			quidu      	"564EC945038E"
+			width      	400
+			height     	319
+			annotation 	0)))))
     properties 	(object Properties
 	attributes 	(list Attribute_Set
 	    (object Attribute
@@ -4981,4 +3914,4 @@
 		tool       	"XML_DTD"
 		name       	"HiddenTool"
 		value      	FALSE))
-	quid       	"5642DEAE03B1"))
+	quid       	"564EC7540348"))

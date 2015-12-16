@@ -1,4 +1,0 @@
-Restore web.bak
-
-Bo folder MyWeb vao o C//
-
