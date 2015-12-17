@@ -63,7 +63,7 @@ namespace Data
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
             a[0] = new SqlParameter("@Top", ""+_sl+"");
-            a[1] = new SqlParameter("@where", "status =1 and new = 1");
+            a[1] = new SqlParameter("@where", "status =1 and New = 1");
             a[2] = new SqlParameter("@order", "[Order] Desc");
             DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
             return dt;
@@ -79,9 +79,10 @@ namespace Data
             return dt;
         }
 
-        public void showClothesByID(string _id)
+        public DataTable showClothesByID(string _id)
         {
-            chonseClothes.showDetail(_id);
+            chonseClothes = new Clothes(_id);
+           return chonseClothes.showDetail();
         }
 
         public void addClothesToBag(string _id)
@@ -89,9 +90,10 @@ namespace Data
             bag.addClothes(_id);
         }
 
-        public void showBagDetail()
-        {
-            bag.showDetail();
+        public DataTable showBagDetail()
+        {  
+
+            return bag.showDetail();
         }
 
         public void createOrder(string _name,string _email,string _address,string _phonenumber)

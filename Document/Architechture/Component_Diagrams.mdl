@@ -383,13 +383,18 @@
 		connections 	(list connection_list
 		    (object Connection_Relationship
 			quid       	"564AB88403B4"
-			supplier   	"Client_PC"
+			supplier   	"Máy tính khách hàng"
 			quidu      	"564AB867022E"
+			supplier_is_device 	FALSE)
+		    (object Connection_Relationship
+			quid       	"56727CD20306"
+			supplier   	"Máy tính nhân viên"
+			quidu      	"564AB86B00F3"
 			supplier_is_device 	FALSE))
 		characteristics 	""
 		scheduling 	"Preemptive"
 		processes  	(list processes))
-	    (object Processor "Database Server"
+	    (object Processor "Database"
 		quid       	"564AB85E00DB"
 		connections 	(list connection_list
 		    (object Connection_Relationship
@@ -400,17 +405,17 @@
 		characteristics 	""
 		scheduling 	"Preemptive"
 		processes  	(list processes))
-	    (object Processor "Client_PC"
+	    (object Processor "Máy tính khách hàng"
 		quid       	"564AB867022E"
 		characteristics 	""
 		scheduling 	"Preemptive"
 		processes  	(list processes))
-	    (object Processor "Admin_PC"
+	    (object Processor "Máy tính nhân viên"
 		quid       	"564AB86B00F3"
 		connections 	(list connection_list
 		    (object Connection_Relationship
 			quid       	"564AB87702EC"
-			supplier   	"Database Server"
+			supplier   	"Database"
 			quidu      	"564AB85E00DB"
 			supplier_is_device 	FALSE)
 		    (object Connection_Relationship
@@ -426,8 +431,27 @@
 		characteristics 	""
 		scheduling 	"Preemptive"
 		processes  	(list processes))
+	    (object Processor "NewProcessor"
+		quid       	"56727A48034A"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Máy tính nguoi quan ly"
+		quid       	"56727BB8003B"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"56727CEC0306"
+			supplier   	"Website"
+			quidu      	"564AB61D01BA"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
 	    (object Device "NewDevice"
 		quid       	"564AB61F02CA"
+		characteristics 	"")
+	    (object Device "Máy tính"
+		quid       	"56727AF10217"
 		characteristics 	"")
 	    (object Process_Diagram "Deployment View"
 		quid       	"3E400AA502EE"
@@ -436,10 +460,10 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	0
+		origin_y   	688
 		items      	(list diagram_item_list
 		    (object ProcessorView "Website" @10
-			location   	(1184, 736)
+			location   	(1152, 736)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -451,7 +475,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@10
-			    location   	(983, 611)
+			    location   	(951, 611)
 			    nlines     	2
 			    max_width  	331
 			    justify    	0
@@ -462,7 +486,7 @@
 			width      	406
 			height     	319
 			annotation 	0)
-		    (object ProcessorView "Database Server" @11
+		    (object ProcessorView "Database" @11
 			location   	(2000, 736)
 			font       	(object Font
 			    size       	10
@@ -479,62 +503,14 @@
 			    nlines     	2
 			    max_width  	331
 			    justify    	0
-			    label      	"Database Server")
+			    label      	"Database")
 			icon_style 	"Icon"
 			line_color 	3342489
 			quidu      	"564AB85E00DB"
 			width      	406
 			height     	325
 			annotation 	0)
-		    (object ProcessorView "Client_PC" @12
-			location   	(448, 752)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@12
-			    location   	(262, 637)
-			    nlines     	2
-			    max_width  	300
-			    justify    	0
-			    label      	"Client_PC")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"564AB867022E"
-			width      	375
-			height     	300
-			annotation 	0)
-		    (object ProcessorView "Admin_PC" @13
-			location   	(1184, 192)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@13
-			    location   	(999, 77)
-			    nlines     	2
-			    max_width  	299
-			    justify    	0
-			    label      	"Admin_PC")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"564AB86B00F3"
-			width      	374
-			height     	300
-			annotation 	0)
-		    (object ConnectionView "" @14
+		    (object ConnectionView "" @12
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"564AB87E01ED"
@@ -542,30 +518,157 @@
 			supplier   	@10
 			vertices   	(list Points
 			    (1797, 736)
-			    (1356, 736))
+			    (1324, 736))
 			line_style 	0)
-		    (object ConnectionView "" @15
+		    (object Label @13
+			location   	(160, 896)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			nlines     	1
+			max_width  	600
+			justify    	1
+			label      	"Web Browser")
+		    (object ProcessorView "Máy tính nguoi quan ly" @14
+			location   	(1152, 176)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(947, 45)
+			    nlines     	2
+			    max_width  	338
+			    justify    	0
+			    label      	"Máy tính nguoi quan ly")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"56727BB8003B"
+			width      	413
+			height     	331
+			annotation 	0)
+		    (object ProcessorView "Máy tính khách hàng" @15
+			location   	(320, 736)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(134, 624)
+			    nlines     	2
+			    max_width  	301
+			    justify    	0
+			    label      	"Máy tính khách hàng")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"564AB867022E"
+			width      	376
+			height     	293
+			annotation 	0)
+		    (object ProcessorView "Máy tính nhân viên" @16
+			location   	(1152, 1248)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(947, 1117)
+			    nlines     	2
+			    max_width  	338
+			    justify    	0
+			    label      	"Máy tính nhân viên")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"564AB86B00F3"
+			width      	413
+			height     	331
+			annotation 	0)
+		    (object Label @17
+			location   	(960, 1424)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			nlines     	1
+			max_width  	600
+			justify    	1
+			label      	"Web Browser")
+		    (object Label @18
+			location   	(976, 352)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			nlines     	1
+			max_width  	600
+			justify    	1
+			label      	"Web Browser")
+		    (object ConnectionView "" @19
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"56727CD20306"
+			client     	@10
+			supplier   	@16
+			vertices   	(list Points
+			    (1152, 895)
+			    (1152, 1098))
+			line_style 	0)
+		    (object ConnectionView "" @20
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"56727CEC0306"
+			client     	@14
+			supplier   	@10
+			vertices   	(list Points
+			    (1152, 341)
+			    (1152, 592))
+			line_style 	0)
+		    (object ConnectionView "" @21
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"564AB88403B4"
 			client     	@10
-			supplier   	@12
+			supplier   	@15
 			vertices   	(list Points
-			    (981, 736)
-			    (604, 752))
+			    (949, 736)
+			    (477, 736))
 			line_style 	0)
-		    (object ConnectionView "" @16
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"564AB88B00F5"
-			client     	@13
-			supplier   	@10
-			vertices   	(list Points
-			    (1184, 342)
-			    (1184, 592))
-			line_style 	0)
-		    (object Label @17
-			location   	(704, 672)
+		    (object Label @22
+			location   	(1856, 928)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -578,52 +681,7 @@
 			nlines     	1
 			max_width  	600
 			justify    	1
-			label      	"TCP/IP")
-		    (object Label @18
-			location   	(1456, 656)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			nlines     	1
-			max_width  	600
-			justify    	1
-			label      	"TCP/IP")
-		    (object Label @19
-			location   	(1232, 432)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			nlines     	1
-			max_width  	600
-			justify    	1
-			label      	"TCP/IP")
-		    (object Label @20
-			location   	(1872, 912)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			nlines     	1
-			max_width  	600
-			justify    	1
-			label      	"Database")))))
+			label      	"SQL Server")))))
     properties 	(object Properties
 	attributes 	(list Attribute_Set
 	    (object Attribute

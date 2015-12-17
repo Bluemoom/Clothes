@@ -15,12 +15,12 @@ namespace PTXDPM.UseCotrol
         protected void Page_Load(object sender, EventArgs e)
         {
             OrderClothesUI orderClothesUI = new OrderClothesUI();
-            ConnectDB db = new ConnectDB();
             if (!IsPostBack)
             {
                 listproduct.DataSource = orderClothesUI.showNewClothes(20);
                 listproduct.DataBind();
             }
+
         }
     }
 }

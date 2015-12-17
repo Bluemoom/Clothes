@@ -35,6 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="assets/js/simpleCart.min.js"> </script>
 </head>
 <body>
+<form id="form1" runat="server">
 <!-- header_top -->
 <div class="top_bg">
 	<div class="container">
@@ -59,62 +60,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 	<div class="head-t">
 		<div class="logo">
-			<a href="index.html"><img src="assets/images/logo.png" class="img-responsive" alt=""/> </a>
+			<a href="/Customer/Home.aspx"><img src="assets/images/logo.png" class="img-responsive" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
-		<div class="header_right">
-			<div class="rgt-bottom">
-				<div class="log">
-					<div class="login" >
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-						    <div id="loginBox">                
-						        <form id="loginForm">
-						                <fieldset id="body">
-						                	<fieldset>
-						                          <label for="email">Email Address</label>
-						                          <input type="text" name="email" id="email">
-						                    </fieldset>
-						                    <fieldset>
-						                            <label for="password">Password</label>
-						                            <input type="password" name="password" id="password">
-						                     </fieldset>
-						                    <input type="submit" id="login" value="Sign in">
-						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-						            	</fieldset>
-						            <span><a href="#">Forgot your password?</a></span>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="reg">
-					<a href="register.html">REGISTER</a>
-				</div>
-			<div class="cart box_1">
-				<a href="checkout.html">
-					<h3> <span class="simpleCart_total">0.00VNĐ</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
-				</a>	
-				<p><a href="javascript:;" class="simpleCart_empty">(chưa có sản phẩm)</a></p>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="create_btn">
-				<a href="checkout.html">CHECKOUT</a>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="search">
-		    <form>
-		    	<input type="text" value="" placeholder="search...">
-				<input type="submit" value="">
-			</form>
-		</div>
-		<div class="clearfix"> </div>
-		</div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
 		<div class="clearfix"> </div>
 	</div>
 		<!-- start header menu -->
 		<ul class="megamenu skyblue">
-			<li class="active grid"><a class="color1" href="index.html">Trang Chủ</a></li>
+			<li class="active grid"><a class="color1" href="/Customer/Home.aspx">Trang Chủ</a></li>
 			<li class="grid"><a class="color2" href="#">Danh mục</a>
 				<div class="megapanel">
 					<div class="row">
@@ -220,81 +175,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 </div>
-<div class="arriv">
-	<div class="container">
-		<div class="arriv-top">
-			<div class="col-md-6 arriv-left">
-				<img src="assets/images/1.jpg" class="img-responsive" alt=""> <!-- Load hinh anh tu database vao day-->
-				<div class="arriv-info">
-					<h3>MỘT NĂM BẢO HÀNH</h3>  <!-- Load tieu de tu database vao day-->
-					<p>CÓ GÌ ĐẶC BIỆT</p>  <!-- Load tieu de tu database vao day-->
-					<div class="crt-btn">
-						<a href="details.html">XEM THÊM</a>   <!-- Thay thang ActionRectiont load bai viet tu database vào day-->
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 arriv-right">
-				<img src="assets/images/2.jpg" class="img-responsive" alt="">
-				<div class="arriv-info">
-					<h3>THỬ GIÀY</h3>
-					<p>TẠI NHÀ</p>
-					<div class="crt-btn">
-						<a href="details.html">XEM NGAY</a> <!-- cai nay phai dung actionto load tu database ra -->
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="arriv-bottm">
-			<div class="col-md-8 arriv-left1">
-				<img src="assets/images/3.jpg" class="img-responsive" alt="">
-				<div class="arriv-info1">
-					<h3>MIỄN PHÍ ĐỔI TRẢ</h3>
-					<p>TRONG VÒNG 365 NGÀY</p>
-					<div class="crt-btn">
-						<a href="details.html">XEM THÊM</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 arriv-right1">
-				<img src="assets/images/4.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="arriv-las">
-			<div class="col-md-4 arriv-left2">
-				<img src="assets/images/5.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="col-md-4 arriv-middle">
-				<img src="assets/images/6.jpg" class="img-responsive" alt="">
-				<div class="arriv-info3">
-					<h3>FRESH LOOK T-SHIRT</h3>
-					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 arriv-right2">
-				<img src="assets/images/7.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
-
-<div id="content">
+<div class="special">
+            	<div class="container">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div> 
+    </div>>
 
 <div class="foot-top">
 	<div class="container">
@@ -383,5 +269,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p>Copyrights © 2015 Gretong. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 </div>
+</form>
 </body>
 </html>

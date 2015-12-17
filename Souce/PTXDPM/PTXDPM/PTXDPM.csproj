@@ -176,7 +176,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Customer\assets\Style\StyleChiTietSanPham.css" />
     <Content Include="Customer\assets\Style\StyleHienThiHangHoa.css" />
+    <Content Include="Customer\BagDetail.aspx" />
+    <Content Include="Customer\DetailClothes.aspx" />
     <Content Include="Customer\Home.aspx" />
+    <Content Include="Customer\Images\Clothes\b.jpg" />
+    <Content Include="Customer\Images\Clothes\Kinh.jpg" />
+    <Content Include="Customer\Images\Clothes\Kinh2.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -218,6 +223,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="UseCotrol\BagDetail.ascx" />
+    <Content Include="UseCotrol\DetailClothes.ascx" />
+    <Content Include="UseCotrol\HeadRight.ascx" />
     <Content Include="UseCotrol\NewClothes.ascx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -357,6 +365,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\BagDetail.aspx.cs">
+      <DependentUpon>BagDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\BagDetail.aspx.designer.cs">
+      <DependentUpon>BagDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\DetailClothes.aspx.cs">
+      <DependentUpon>DetailClothes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\DetailClothes.aspx.designer.cs">
+      <DependentUpon>DetailClothes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,6 +420,27 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UseCotrol\BagDetail.ascx.cs">
+      <DependentUpon>BagDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UseCotrol\BagDetail.ascx.designer.cs">
+      <DependentUpon>BagDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UseCotrol\DetailClothes.ascx.cs">
+      <DependentUpon>DetailClothes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UseCotrol\DetailClothes.ascx.designer.cs">
+      <DependentUpon>DetailClothes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UseCotrol\HeadRight.ascx.cs">
+      <DependentUpon>HeadRight.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UseCotrol\HeadRight.ascx.designer.cs">
+      <DependentUpon>HeadRight.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UseCotrol\NewClothes.ascx.cs">
       <DependentUpon>NewClothes.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
