@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="reg">
-            <a href="register.html"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="register.html"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a>
+            <a href="/Customer/Login.aspx"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="/Customer/Register.aspx"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a>
         </div>
         <div class="cart box_1">
 <%--            <a href="checkout.html">

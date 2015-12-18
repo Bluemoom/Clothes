@@ -65,8 +65,7 @@ namespace Data
                 dr["Quantity"] = item.Quantity;
                 dr["TotalPrice"] = (Double.Parse(item.Quantity)*Double.Parse(item.PriceOut)).ToString();
                 tbl.Rows.Add(dr);
-            }
-            caculatorTotalPrice();
+            }  
             return tbl;   
         }
 

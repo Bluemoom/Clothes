@@ -178,10 +178,14 @@
     <Content Include="Customer\assets\Style\StyleHienThiHangHoa.css" />
     <Content Include="Customer\BagDetail.aspx" />
     <Content Include="Customer\DetailClothes.aspx" />
+    <Content Include="Customer\FinishOrder.aspx" />
     <Content Include="Customer\Home.aspx" />
     <Content Include="Customer\Images\Clothes\b.jpg" />
     <Content Include="Customer\Images\Clothes\Kinh.jpg" />
     <Content Include="Customer\Images\Clothes\Kinh2.jpg" />
+    <Content Include="Customer\Login.aspx" />
+    <Content Include="Customer\Order.aspx" />
+    <Content Include="Customer\Register.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -379,12 +383,40 @@
     <Compile Include="Customer\DetailClothes.aspx.designer.cs">
       <DependentUpon>DetailClothes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\FinishOrder.aspx.cs">
+      <DependentUpon>FinishOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\FinishOrder.aspx.designer.cs">
+      <DependentUpon>FinishOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Customer\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

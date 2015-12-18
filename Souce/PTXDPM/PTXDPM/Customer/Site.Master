@@ -208,7 +208,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="stay">
 						<div class="stay-left">
 							<form>
-								<input type="text" placeholder="Enter your email to join our newsletter" required="">      <!-- Co the bo qua cai nay -->
+								<input type="text" placeholder="Enter your email to join our newsletter">      <!-- Co the bo qua cai nay -->
 							</form>
 						</div>
 						<div class="btn-1">

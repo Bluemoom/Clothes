@@ -7,45 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTXDPM.UseCotrol {
+namespace PTXDPM.Customer {
     
     
-    public partial class Bag {
+    public partial class Order {
         
         /// <summary>
-        /// grdGioHang control.
+        /// txtHoTen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdGioHang;
+        protected global::System.Web.UI.WebControls.TextBox txtHoTen;
         
         /// <summary>
-        /// LiteralTongtien control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LiteralTongtien;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// lbTongTien control.
+        /// txtDiaChi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTongTien;
+        protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
         
         /// <summary>
-        /// lb1 control.
+        /// txtSĐT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb1;
+        protected global::System.Web.UI.WebControls.TextBox txtSĐT;
+        
+        /// <summary>
+        /// RadioButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        
+        /// <summary>
+        /// RadioButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
     }
 }

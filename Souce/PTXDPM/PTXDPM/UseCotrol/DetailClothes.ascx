@@ -28,18 +28,18 @@
 									<!-- //FlexSlider-->
 
 							  <ul class="slides">
-								<li data-thumb="images/d1.jpg">
+								<li data-thumb="<%#Eval("Images") %>">
 									<div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<%--<li data-thumb="images/d2.jpg">
+								<li data-thumb="<%#Eval("Images") %>">
 									 <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="images/d3.jpg">
+								<li data-thumb="<%#Eval("Images") %>">
 								   <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="images/d4.jpg">
+								<li data-thumb="<%#Eval("Images") %>">
 								   <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
-								</li>--%>
+								</li>
 							  </ul>
 							<div class="clearfix"></div>
 						</div>
@@ -48,22 +48,24 @@
 
                  <div class="desc1 span_3_of_2">
                 <h3><%#Eval("Name") %></h3>
-                <!--Tên load từ database-->
+
                 <span class="brand">Nhãn hiệu: <a href="#">VietTien </a></span>
-                <!-- load từ database-->
+
                 <br>
                 <span class="code">Mã sản phẩm: <%#Eval("ID") %></span>
-                <!-- load từ database-->
+
                 <p><%#Eval("Description") %></p>
                 <!-- Description -->
                 <div class="price">
                     <span class="text">Price:</span>
-                    <span class="price-new"><%#Eval("PriceOut") %><%--</span><span class="price-old">500 000VNĐ</span> --%>
+                    <span class="price-new"><%#Eval("NewPrice") %> VNĐ</span><span class="price-old"><%#Eval("PriceOut") %> VNĐ</span> 
+                    <span class="price-tax">VAT: 10 000VNĐ</span><br>
+					<span class="points"><small>Gía theo điểm thưởng 400 000VNĐ</small></span><br>
                 </div>
                 <div class="det_nav1">
                     <h4>Chọn kích cỡ :</h4>
                     <div class=" sky-form col col-4">
-                        <ul>
+                      <%--  <ul>
                             <li>
                                 <label class="checkbox">
                                     <input type="checkbox" name="checkbox"><i></i>L</label></li>
@@ -76,7 +78,7 @@
                             <li>
                                 <label class="checkbox">
                                     <input type="checkbox" name="checkbox"><i></i>XL</label></li>
-                        </ul>
+                        </ul>--%>
                     </div>
                 </div>
                 <div class="btn_form">
@@ -85,11 +87,14 @@
                 <a href="#"><span>Đăng nhập để được giảm giá </span></a>
             </div>
           	    <div class="clearfix"></div>
+                      </div>
           	    <div class="single-bottom1">
                       <h6>Thông tin chi tiết</h6>
                       <p class="prod-desc"><%#Eval("Description") %></p>
                   </div>
                       </div>
+                    </div>
+                    </div>
                     </div>
                     </ItemTemplate>
 		   	     </asp:DataList>

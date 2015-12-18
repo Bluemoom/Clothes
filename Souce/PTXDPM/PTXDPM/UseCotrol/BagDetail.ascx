@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BagDetail.ascx.cs" Inherits="PTXDPM.UseCotrol.Bag" %>
-
+<div class ="BagDetail">
     <asp:GridView ID="grdGioHang" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
@@ -11,12 +11,7 @@
             </ItemTemplate>
         </asp:TemplateField>
             <asp:BoundField DataField="Quantity" HeaderText="SỐ LƯỢNG" />
-            <%--<asp:TemplateField HeaderText="HÌNH ẢNH">
-                <ItemTemplate>
-                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Eval("Sl") %>'></asp:TextBox>
-                </ItemTemplate>
-            </asp:TemplateField>--%>
-            <asp:BoundField DataField="TotalPrice" HeaderText="THÀNH TIỀN" />
+            <asp:BoundField DataField="TotalPrice" HeaderText="THÀNH TIỀN" /> 
             <asp:ButtonField CommandName="CapNhat" Text="Cập nhật" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
@@ -32,6 +27,15 @@
     </asp:GridView>
     <asp:Literal ID="LiteralTongtien" runat="server"></asp:Literal>
     <br />
-
-    <%--<asp:Button ID="btnDatHang" runat="server" Text="Đặt hàng" OnClick="btnDatHang_Click" />--%>
+    
+    </div>
+<div class ="Order">
+    <h2>ĐƠN HÀNG</h2>
+    <h4>Tổng tiền</h4><asp:Label ID="lbTongTien" runat="server" Text="0 VNĐ"></asp:Label>
+    <h4>Chi phí vận chuyển</h4><asp:Label ID="lb1" runat="server" Text="0 VNĐ"></asp:Label>
+     <div class="btn_form">
+                    <a href="Order.aspx">ĐẶT HÀNG</a>
+     </div>
+</div>
+   
 

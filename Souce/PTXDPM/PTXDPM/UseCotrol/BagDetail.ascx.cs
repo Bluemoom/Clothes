@@ -26,6 +26,8 @@ namespace PTXDPM.UseCotrol
                 }
                 if (ID != null) orderClothesUI.addClothesToBag(ID);
                 Session["Bag"] = orderClothesUI.bag;
+                orderClothesUI.bag.caculatorTotalPrice();
+                lbTongTien.Text = orderClothesUI.bag.totalPrice.ToString() +" VNĐ";
                 showBagDetail();
             }
         }
