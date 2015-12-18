@@ -34,9 +34,7 @@ namespace Data
                 //a[2] = new SqlParameter("@Quatity", data.Quatity);
                 //return ExecuteCommand("Order_Detail_Insert", a); 
             }
-            
-            DataTable dt = db.ReturnDataTable("GroupClothes_SelectByTop", a);
-            return dt;
+
         }
 
         public void printOrder()
