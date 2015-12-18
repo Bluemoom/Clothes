@@ -4,7 +4,7 @@
         <div class="specia-top">
             <asp:DataList ID="listproduct" runat="server" RepeatColumns="3" Width="100%" RepeatDirection="Horizontal">
                 <ItemTemplate>
-                    <div class="Productnew">
+                    <div class="showProduct">
                         <a href="DetailClothes.aspx?ID=<%#Eval("ID") %>">
                             <img src="<%#Eval("Images") %>" class="img-responsive" alt=""></a>
                         <!-- Load trang chi tiet va hinh anh tu database vao day -->

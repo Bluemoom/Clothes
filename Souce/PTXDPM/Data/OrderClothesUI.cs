@@ -102,5 +102,16 @@ namespace Data
             customer = new Customer(_name, _email, _address, _phonenumber);
             order = new Order(bag, customer, date);
         }
+
+        public DataTable ShowGroup(int _sl)
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[3];
+            a[0] = new SqlParameter("@Top", "" + _sl + "");
+            a[1] = new SqlParameter("@where", "");
+            a[2] = new SqlParameter("@order", "");
+            DataTable dt = db.ReturnDataTable("GroupClothes_SelectByTop", a);
+            return dt;
+        }
     }
 }

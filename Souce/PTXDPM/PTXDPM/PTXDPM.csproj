@@ -494,6 +494,7 @@
     <Folder Include="Customer\assets\css\" />
     <Folder Include="Customer\assets\images\" />
     <Folder Include="Customer\assets\js\" />
+    <Folder Include="Customer\Images\GroupClothes\" />
     <Folder Include="Images\Clothes\" />
   </ItemGroup>
   <ItemGroup>

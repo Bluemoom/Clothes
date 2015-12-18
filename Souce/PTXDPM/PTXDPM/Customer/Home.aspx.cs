@@ -15,6 +15,8 @@ namespace PTXDPM.Customer
         {
             if (!IsPostBack)
             {
+                listGroup.DataSource = orderClothesUI.ShowGroup(6);
+                listGroup.DataBind();
                 listproduct.DataSource = orderClothesUI.showNewClothes(20);
                 listproduct.DataBind();
             }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,23 @@ namespace Data
             this.bag = _bag;
             this.customer = _customer;
             this.date = _date;
+
+
+            //Thêm Order vào CSDL
+            //Thêm OrderDetail vào CSDL
+
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[3];
+            foreach(Clothes item in _bag.listClothes)
+            {
+                //a[0] = new SqlParameter("@Order_ID", _customer.id);
+                //a[1] = new SqlParameter("@ProductID", data.ProductID);
+                //a[2] = new SqlParameter("@Quatity", data.Quatity);
+                //return ExecuteCommand("Order_Detail_Insert", a); 
+            }
+            
+            DataTable dt = db.ReturnDataTable("GroupClothes_SelectByTop", a);
+            return dt;
         }
 
         public void printOrder()
