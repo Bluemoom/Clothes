@@ -15,7 +15,7 @@
                                 <div class="TenNhom">
                                     <h3><%#Eval("Name") %></h3>
                                     <div class="XemThem">
-                                        <a href="details.html">XEM NGAY</a>
+                                        <a href="SanPhamNhom.aspx?ID=<%#Eval("ID")%>">XEM NGAY</a>
                                     </div>
                                 </div>
                             </div>

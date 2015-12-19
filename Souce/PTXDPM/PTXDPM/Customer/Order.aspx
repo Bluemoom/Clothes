@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="PTXDPM.Customer.Order" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" EnableEventValidation="false"  Inherits="PTXDPM.Customer.Order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
@@ -6,10 +6,10 @@
     <div class="registration_form">
         <h2>THÔNG TIN KHÁCH HÀNG</h2>
         <!-- Form -->
-        <form id="registration_form" method="post">
+        <form id="registration_form"  method="post">
             <div>
                 <label>
-                    <asp:TextBox ID="txtHoTen" placeholder="Họ tên" runat="server" Width="500px" required=""></asp:TextBox>
+                    <asp:TextBox ID="txtHoTen" placeholder="Họ tên" autofocus="autofocus" runat="server" Width="500px" required=""></asp:TextBox>
                 </label>
             </div>
             <div>
@@ -40,12 +40,12 @@
                         <div class="clearfix"></div>
                     </ul>
                 </div>
-                <div class="btn_form">
+                <%--<div class="btn_form">
                     <a href="FinishOrder.aspx">HOÀN TẤT MUA HÀNG</a>
-                </div>
+                </div>--%>
             </div>
-    </div>
-    <%--<input type="submit" value="HOÀN TẤT MUA HÀNG" action="FinishOrder.aspx" id="register-submit">--%>
+            <asp:Button ID="btnDatHang" runat="server" Text="Đặt hàng"  OnClick="btnDatHang_Click" />
+           <%-- <input type="submit" value="HOÀN TẤT MUA HÀNG"  id="register-submit">--%>
         </form>
         <!-- /Form -->
     </div>

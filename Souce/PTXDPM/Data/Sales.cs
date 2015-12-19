@@ -15,7 +15,7 @@ namespace Data
         public string discount { get; set; }
 
         public Sales() { }
-        public Sales(string _id,string _title,string _startDate,string _outOfDate, string _discount)
+        public Sales(string _id, string _title, string _startDate, string _outOfDate, string _discount)
         {
             this.id = _id;
             this.title = _title;

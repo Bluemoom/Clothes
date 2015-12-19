@@ -186,6 +186,7 @@
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\Order.aspx" />
     <Content Include="Customer\Register.aspx" />
+    <Content Include="Customer\SanPhamNhom.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -417,6 +418,13 @@
     </Compile>
     <Compile Include="Customer\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\SanPhamNhom.aspx.cs">
+      <DependentUpon>SanPhamNhom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\SanPhamNhom.aspx.designer.cs">
+      <DependentUpon>SanPhamNhom.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

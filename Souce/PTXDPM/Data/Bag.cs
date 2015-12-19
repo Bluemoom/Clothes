@@ -12,12 +12,13 @@ namespace Data
         public List<Clothes> listClothes { get; set; }
         public double totalPrice { get; set; }
 
-        public Bag() {
+        public Bag()
+        {
             listClothes = new List<Clothes>();
             totalPrice = 0;
         }
 
-        public Bag(List<Clothes> _list,float _total)
+        public Bag(List<Clothes> _list, float _total)
         {
             this.listClothes = _list;
             this.totalPrice = _total;
@@ -25,27 +26,22 @@ namespace Data
 
         public void addClothes(string _id)
         {
-            //Clothes temp = new Clothes(_id);
-            //temp.getClothesByID();
-            //foreach (Clothes item in listClothes)
-            //    if (temp.ID == item.ID)
-            //    {
-            //        temp.Quantity += item.Quantity;
-            //        listClothes.Remove(item);
-            //    }
-            //this.listClothes.Add(temp);
             int temp = 1;
-            foreach(Clothes item in listClothes)
+            foreach (Clothes item in listClothes)
             {
+                //Neu clothes da ton tai thi tang so luong
                 if (item.ID == _id)
                 {
                     item.Quantity = (int.Parse(item.Quantity) + 1).ToString();
                     temp = 0;
                 }
             }
-            Clothes temp1 = new Clothes(_id);
-            temp1.getClothesByID();
-            if (temp == 1) this.listClothes.Add(temp1);
+            //Them clothes chua ton tai thi them moi clothes
+            if (temp == 1)
+            {
+                Clothes temp1 = new Clothes(_id);
+                this.listClothes.Add(temp1);
+            }
         }
 
         public DataTable showDetail()
@@ -61,18 +57,18 @@ namespace Data
                 DataRow dr = tbl.NewRow();
                 dr["ID"] = item.ID.ToString();
                 dr["Name"] = item.Name;
-                dr["Images"] =item.Images;
+                dr["Images"] = item.Images;
                 dr["Quantity"] = item.Quantity;
-                dr["TotalPrice"] = (Double.Parse(item.Quantity)*Double.Parse(item.PriceOut)).ToString();
+                dr["TotalPrice"] = (Double.Parse(item.Quantity) * Double.Parse(item.PriceOut)).ToString();
                 tbl.Rows.Add(dr);
-            }  
-            return tbl;   
+            }
+            return tbl;
         }
 
         public void caculatorTotalPrice()
         {
-            totalPrice = 0;
-           foreach(Clothes item in listClothes)
+            totalPrice = 0; // vi tinh nhieu lan se bi tang len
+            foreach (Clothes item in listClothes)
                 totalPrice += (double.Parse(item.Quantity) * double.Parse(item.PriceOut));
         }
     }
