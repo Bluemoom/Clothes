@@ -49,7 +49,7 @@
                  <div class="desc1 span_3_of_2">
                 <h3><%#Eval("Name") %></h3>
 
-                <span class="brand">Nhãn hiệu: <a href="#">VietTien </a></span>
+                <span class="brand">Nhãn hiệu: <a href="#"><%#Eval("GroupClothesID") %> </a></span>
 
                 <br>
                 <span class="code">Mã sản phẩm: <%#Eval("ID") %></span>
@@ -58,9 +58,10 @@
                 <!-- Description -->
                 <div class="price">
                     <span class="text">Price:</span>
-                    <span class="price-new"><%#Eval("NewPrice") %> VNĐ</span><span class="price-old"><%#Eval("PriceOut") %> VNĐ</span> 
-                    <span class="price-tax">VAT: 10 000VNĐ</span><br>
-					<span class="points"><small>Gía theo điểm thưởng 400 000VNĐ</small></span><br>
+                    <span class="price-new"><%#Eval("NewPrice") %> VNĐ</span><span class="price-old"><%#Eval("PriceOut") %> VNĐ</span> <br />
+                    <span class="price-tax">Đồ Nam</span><br>
+					<%--<span class="points"><small>Số lượng còn lại: <%#Eval("Quantity") %></small></span><br>--%>
+					<span class="points">Số lượng còn lại: <%#Eval("Quantity") %></span><br>
                 </div>
                 <div class="det_nav1">
                     <h4>Chọn kích cỡ :</h4>

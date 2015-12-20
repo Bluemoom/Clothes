@@ -31,6 +31,29 @@ namespace PTXDPM.UseCotrol
                 showBagDetail();
             }
         }
+
+        protected void grdGioHang_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "CapNhat")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                Data.Bag bag = (Data.Bag)Session["Bag"];
+                string quantity = "";
+                // Lấy giá trị số lượng trong ô textbox
+                quantity = ((TextBox)(grdGioHang.Rows[index].FindControl("txtQuantity"))).Text;
+                // Lấy giá trị mã sản phẩm 
+                string clothesID = grdGioHang.Rows[index].Cells[0].Text;
+                foreach (Clothes item in bag.listClothes)
+                {
+                    if (item.ID == clothesID) item.Quantity = quantity;
+                    //if (item.ID == clothesID) item.Quantity = (int.Parse(quantity) - 1).ToString();
+                }
+                Session["Bag"] = bag;
+                //Response.Redirect(Request.RawUrl);
+                Response.Redirect("BagDetail.aspx");
+                showBagDetail();
+            }
+        }
         private void showBagDetail()
         {
             grdGioHang.DataSource = orderClothesUI.showBagDetail();

@@ -1,18 +1,22 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BagDetail.ascx.cs" Inherits="PTXDPM.UseCotrol.Bag" %>
 <div class ="BagDetail">
-    <asp:GridView ID="grdGioHang" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+    <asp:GridView ID="grdGioHang" runat="server" AutoGenerateColumns="False" CellPadding="4" OnRowCommand="grdGioHang_RowCommand" ForeColor="#333333" GridLines="None" Width="100%">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="MÃ" />
             <asp:BoundField DataField="Name" HeaderText="TÊN HÀNG" />  
             <asp:TemplateField HeaderText="HÌNH ẢNH" HeaderStyle-CssClass="hd_center" ItemStyle-CssClass="center">
             <ItemTemplate>
-                <img src='<%#Eval("Images") %>' width="150px" height="225px" alt="" />
+                <img src='<%#Eval("Images") %>' width="100px" height="150px" alt="" />
             </ItemTemplate>
         </asp:TemplateField>
-            <asp:BoundField DataField="Quantity" HeaderText="SỐ LƯỢNG" />
-            <asp:BoundField DataField="TotalPrice" HeaderText="THÀNH TIỀN" /> 
+            <asp:TemplateField HeaderText="Số lượng">
+                <ItemTemplate>
+                    <asp:TextBox ID="txtQuantity" runat="server" Width="60px" Text='<%# Eval("Quantity") %>'></asp:TextBox>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:ButtonField CommandName="CapNhat" Text="Cập nhật" />
+            <asp:BoundField DataField="TotalPrice" HeaderText="THÀNH TIỀN" />            
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

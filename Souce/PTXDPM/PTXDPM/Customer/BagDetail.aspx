@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="BagDetail.aspx.cs" Inherits="PTXDPM.Customer.Bag" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="BagDetail.aspx.cs" Inherits="PTXDPM.Customer.Bag" %>
 
 <%@ Register Src="~/UseCotrol/BagDetail.ascx" TagPrefix="uc1" TagName="BagDetail" %>
 

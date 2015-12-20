@@ -29,21 +29,7 @@
             </div>
 
 
-            <div class="sky-form">
-                <div class="sky_form1">
-                    <ul>
-                        <li>
-                            <asp:RadioButton ID="RadioButton1" Checked="true" Visible="true" Text="Nam" GroupName="GioiTinh" runat="server" /></li>
-                        <li>
-
-                            <asp:RadioButton ID="RadioButton2" Text="Nữ" GroupName="GioiTinh" runat="server" /></li>
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <%--<div class="btn_form">
-                    <a href="FinishOrder.aspx">HOÀN TẤT MUA HÀNG</a>
-                </div>--%>
-            </div>
+          
             <asp:Button ID="btnDatHang" runat="server" Text="Đặt hàng"  OnClick="btnDatHang_Click" />
            <%-- <input type="submit" value="HOÀN TẤT MUA HÀNG"  id="register-submit">--%>
         </form>
