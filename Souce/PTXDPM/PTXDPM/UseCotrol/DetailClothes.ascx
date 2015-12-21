@@ -31,14 +31,14 @@
 								<li data-thumb="<%#Eval("Images") %>">
 									<div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="<%#Eval("Images") %>">
-									 <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<%#Eval("Image2") %>">
+									 <div class="thumb-image"> <img src="<%#Eval("Image2") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="<%#Eval("Images") %>">
-								   <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<%#Eval("Image3") %>">
+								   <div class="thumb-image"> <img src="<%#Eval("Image3") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="<%#Eval("Images") %>">
-								   <div class="thumb-image"> <img src="<%#Eval("Images") %>" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<%#Eval("Image4") %>">
+								   <div class="thumb-image"> <img src="<%#Eval("Image4") %>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
 							  </ul>
 							<div class="clearfix"></div>

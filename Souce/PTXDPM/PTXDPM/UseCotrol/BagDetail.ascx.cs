@@ -34,10 +34,10 @@ namespace PTXDPM.UseCotrol
 
         protected void grdGioHang_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            Data.Bag bag = (Data.Bag)Session["Bag"];
+            int index = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "CapNhat")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-                Data.Bag bag = (Data.Bag)Session["Bag"];
+            {              
                 string quantity = "";
                 // Lấy giá trị số lượng trong ô textbox
                 quantity = ((TextBox)(grdGioHang.Rows[index].FindControl("txtQuantity"))).Text;
@@ -53,7 +53,22 @@ namespace PTXDPM.UseCotrol
                 Response.Redirect("BagDetail.aspx");
                 showBagDetail();
             }
+            if(e.CommandName=="Xoa")
+            {
+                string clothesID = grdGioHang.Rows[index].Cells[0].Text;
+                Clothes temp = null;
+                foreach (Clothes item in bag.listClothes)
+                {
+                    if (item.ID == clothesID) temp = item;
+                }
+                bag.listClothes.Remove(temp);
+                Session["Bag"] = bag;
+                //Response.Redirect(Request.RawUrl);
+                Response.Redirect("BagDetail.aspx");
+                showBagDetail();
+            }
         }
+
         private void showBagDetail()
         {
             grdGioHang.DataSource = orderClothesUI.showBagDetail();

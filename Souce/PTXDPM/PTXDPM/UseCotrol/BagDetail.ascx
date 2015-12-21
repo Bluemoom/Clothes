@@ -10,12 +10,13 @@
                 <img src='<%#Eval("Images") %>' width="100px" height="150px" alt="" />
             </ItemTemplate>
         </asp:TemplateField>
-            <asp:TemplateField HeaderText="Số lượng">
+            <asp:TemplateField HeaderText="SỐ LƯỢNG">
                 <ItemTemplate>
                     <asp:TextBox ID="txtQuantity" runat="server" Width="60px" Text='<%# Eval("Quantity") %>'></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:ButtonField CommandName="CapNhat" Text="Cập nhật" />
+            <asp:ButtonField CommandName="Xoa" Text="Xóa" />
             <asp:BoundField DataField="TotalPrice" HeaderText="THÀNH TIỀN" />            
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
@@ -41,5 +42,3 @@
                     <a href="Order.aspx">ĐẶT HÀNG</a>
      </div>
 </div>
-   
-
