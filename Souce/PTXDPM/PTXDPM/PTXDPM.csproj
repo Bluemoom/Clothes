@@ -170,10 +170,24 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\Products_Management.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Customer\assets\css\bootstrap.css" />
+    <Content Include="Customer\assets\css\flexslider.css" />
+    <Content Include="Customer\assets\css\megamenu.css" />
+    <Content Include="Customer\assets\css\style.css" />
+    <Content Include="Customer\assets\images\logo.png" />
+    <Content Include="Customer\assets\js\imagezoom.js" />
+    <Content Include="Customer\assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Customer\assets\js\jquery-ui.min.js" />
+    <Content Include="Customer\assets\js\jquery.flexslider.js" />
+    <Content Include="Customer\assets\js\jquery.jscrollpane.min.js" />
+    <Content Include="Customer\assets\js\megamenu.js" />
+    <Content Include="Customer\assets\js\menu_jquery.js" />
+    <Content Include="Customer\assets\js\simpleCart.min.js" />
     <Content Include="Customer\assets\Style\StyleChiTietSanPham.css" />
     <Content Include="Customer\assets\Style\StyleHienThiHangHoa.css" />
     <Content Include="Customer\BagDetail.aspx" />
@@ -193,6 +207,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Customer\Site.Master" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Customer\Images\Clothes\a.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -352,6 +367,20 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Products_Management.aspx.cs">
+      <DependentUpon>Products_Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Products_Management.aspx.designer.cs">
+      <DependentUpon>Products_Management.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -497,11 +526,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Customer\assets\css\" />
-    <Folder Include="Customer\assets\images\" />
-    <Folder Include="Customer\assets\js\" />
     <Folder Include="Customer\Images\GroupClothes\" />
     <Folder Include="Images\Clothes\" />
   </ItemGroup>
