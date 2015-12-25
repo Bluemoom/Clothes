@@ -17,8 +17,8 @@ namespace PTXDPM.Customer
             if (!IsPostBack)
             {
                 ConnectDB db = new ConnectDB();
-                DLChiTiet.DataSource = orderControl.ShowClothesByID(ID.ToString());
-                DLChiTiet.DataBind();
+                dlDetailCloth.DataSource = orderControl.ShowClothByID(ID.ToString());
+                dlDetailCloth.DataBind();
             }
         }
     }

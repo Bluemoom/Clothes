@@ -3,9 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="arriv">
         <div class="container">
-
             <div class="ListGroup">
-                <asp:DataList ID="listGroup" runat="server" RepeatColumns="3" Width="100%" RepeatDirection="Horizontal">
+                <asp:DataList ID="dlGroupCloth" runat="server" RepeatColumns="3" Width="100%" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <div class="ChiaBaCot">
                             <img src="<%#Eval("Images") %>" class="img-responsive" alt="">
@@ -27,7 +26,7 @@
             <h3>Sản phẩm mới</h3>
         </div>
         <div class="specia-top">
-            <asp:DataList ID="listproduct" runat="server" RepeatColumns="4" Width="100%" RepeatDirection="Horizontal">
+            <asp:DataList ID="dlCloth" runat="server" RepeatColumns="4" Width="100%" RepeatDirection="Horizontal">
                 <ItemTemplate>
                     <div class="showProduct">
                         <a href="ClothDetail.aspx?ID=<%#Eval("ID") %>">

@@ -9,11 +9,7 @@
             Xin chân trọng cảm ơn!<br />
         <br />
         <br />
-            Lưu ý rằng:<br />
-            Tài khoản của bạn đã được tạo. Để quản lý và theo dõi đơn hàng bạn hãy đăng nhập website với các thông tin sau: <br />
-            Email: q<br />
-            Mật khẩu: adep.vn<br />
         <br />
-            Quay lại trang chủ hoặc Đăng nhập ngay<br />
+            <a href="Home.aspx">Quay lại trang chủ</a> hoặc <a href="Login.aspx"></a>Đăng nhập ngay<br />
     </div>
 </asp:Content>

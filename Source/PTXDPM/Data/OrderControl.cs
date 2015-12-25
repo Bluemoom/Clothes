@@ -16,7 +16,11 @@ namespace Data
         public Customer customer { get; set; }
         public Cloth chonseCloth { get; set; }
 
-        public OrderControl() { }
+        public OrderControl() {
+            this.order = new Order();
+            this.customer = new Customer();
+            this.bag = new Bag();
+        }
 
         public OrderControl(Order _order,Bag _bag,Customer _customer,Cloth _chonseClothes)
         {
@@ -61,19 +65,19 @@ namespace Data
         }
 
         // Hàm lấy danh sách sản phẩm mới truyền vào số lượng sản phẩm muốn lấy
-        public DataTable ShowNewClothes(int _sl)
+        public DataTable ShowNewCloth(int _sl)
         {
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
             a[0] = new SqlParameter("@Top", ""+_sl+"");
             a[1] = new SqlParameter("@where", "status =1 and New = 1");
             a[2] = new SqlParameter("@order", "[Order] Desc");
-            DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
-            return dt;
+            DataTable dtNewCloth = db.ReturnDataTable("Clothes_SelectByTop", a);
+            return dtNewCloth;
         }
 
         // Hàm lấy danh sách sản phẩm theo nhóm sản phẩm, truyền vào nhóm sản phẩm
-        public DataTable ShowClothesByGroup(string _groupID)
+        public DataTable ShowClothByGroup(string _groupID)
         {
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
@@ -85,9 +89,9 @@ namespace Data
         }
 
         // Hàm lấy chi tiết sản phẩm, truyền vào mã sản phẩm
-        public DataTable ShowClothesByID(string _id)
+        public DataTable ShowClothByID(string _id)
         {
-           chonseCloth = new Cloth(_id);
+           chonseCloth = Cloth.FindClothByID(_id);
            return chonseCloth.ShowDetail();
         }
 
@@ -96,13 +100,6 @@ namespace Data
         {
             bag.AddCloth(_id);
         }
-
-        // Hàm lấy chi tiết giỏ hàng
-        public DataTable ShowBagDetail()
-        {  
-            return bag.ShowDetail();
-        }
-
         // Hàm tạo đơn hàng 
         public void CreateOrder(string _name,string _email,string _address,string _phonenumber)
         {

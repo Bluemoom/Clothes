@@ -26,10 +26,9 @@ namespace Data
             ConnectDB db = new ConnectDB();
 
             //Lấy ID của khách hàng vừa tạo
-            string customerID = db.GetData("Select Top 1 ID from [dbo].[Customer] order by ID desc", "ID", "");
-            // Sử dụng ID vừa lấy, thêm dữ liệu Order vào CSDL
+
             SqlParameter[] b = new SqlParameter[4];
-            b[0] = new SqlParameter("@CustomerID", customerID);
+            b[0] = new SqlParameter("@CustomerID", _customer.id);
             b[1] = new SqlParameter("@TotalPrice", bag.totalPrice);
             b[2] = new SqlParameter("@Date", DateTime.Now.ToString("MM/dd/yyyy"));
             b[3] = new SqlParameter("@Status", "1");
@@ -51,5 +50,35 @@ namespace Data
         }
         public void PrintOrder()
         { }
+
+
+        // Hiển thị danh sách đơn đặt hàng
+        public DataTable ShowListOrder()
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[3];
+            a[0] = new SqlParameter("@Top", "");
+            a[1] = new SqlParameter("@where", "Status = 1");
+            a[2] = new SqlParameter("@order", "ID desc");
+            DataTable dtListOrder = db.ReturnDataTable("Order_SelectByTop", a);
+            return dtListOrder;
+        }
+
+        public int Unpublic(string ID)
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[1];
+            a[0] = new SqlParameter("@ID", ID);
+            return db.ExecuteCommand("Order_Delete", a);
+        }
+
+        public DataTable ShowDetailOrder(string ID)
+        {
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[1];
+            a[0] = new SqlParameter("@ID", ID);
+            DataTable detailOrder = db.ReturnDataTable("OrderDetail_SelectByOrderID", a);
+            return detailOrder;
+        }
     }
 }

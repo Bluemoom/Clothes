@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="reg">
-            <a href="/Customer/Login.aspx"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="/Customer/Register.aspx"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a>
+            <a href="/Customer/Login.aspx"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="/Customer/Register.aspx"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a><a href="/Customer/Home.aspx?state=1"><asp:Label ID="lbDangXuat" runat="server" Text="ĐĂNG XUẤT"></asp:Label></a>
         </div>
         <div class="cart box_1">
             <a href="/Customer/BagDetail.aspx"

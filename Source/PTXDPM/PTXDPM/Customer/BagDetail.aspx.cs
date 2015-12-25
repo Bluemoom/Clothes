@@ -28,6 +28,7 @@ namespace PTXDPM.Customer
                 if (ID != null) orderControl.AddClothToBag(ID);
                 Session["Bag"] = orderControl.bag;
                 Session["OrderControl"] = orderControl;
+
                 ShowBagDetail();
             }
         }
@@ -41,10 +42,10 @@ namespace PTXDPM.Customer
             {
                 string quantity;
                 // Lấy giá trị số lượng trong ô textbox
-                quantity = ((TextBox)(grdGioHang.Rows[index].FindControl("txtquantity"))).Text;
+                quantity = ((TextBox)(grdBagDetail.Rows[index].FindControl("txtquantity"))).Text;
                 Response.Write("<script>alert('Gia tri cua TextBox : " + quantity + "')</script>");
                 // Lấy giá trị mã sản phẩm 
-                string clothesID = grdGioHang.Rows[index].Cells[0].Text;
+                string clothesID = grdBagDetail.Rows[index].Cells[0].Text;
                 foreach (Cloth item in orderControl.bag.listClothes)
                 {
                     if (item.id == clothesID) item.quantity = quantity;
@@ -57,7 +58,7 @@ namespace PTXDPM.Customer
             }
             if (e.CommandName == "Xoa")
             {
-                string clothesID = grdGioHang.Rows[index].Cells[0].Text;
+                string clothesID = grdBagDetail.Rows[index].Cells[0].Text;
                 Cloth temp = null;
                 foreach (Cloth item in orderControl.bag.listClothes)
                 {
@@ -75,8 +76,8 @@ namespace PTXDPM.Customer
             OrderControl orderControl = (OrderControl)Session["OrderControl"];
             orderControl.bag.CaculatorTotalPrice();
             lbTongTien.Text = orderControl.bag.totalPrice.ToString() + " VNĐ";
-            grdGioHang.DataSource = orderControl.ShowBagDetail();
-            grdGioHang.DataBind();
+            grdBagDetail.DataSource = orderControl.bag.ShowDetail();
+            grdBagDetail.DataBind();
         }
     }
 }

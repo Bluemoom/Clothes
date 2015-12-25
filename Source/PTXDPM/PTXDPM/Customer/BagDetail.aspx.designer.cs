@@ -13,13 +13,13 @@ namespace PTXDPM.Customer {
     public partial class BagDetail {
         
         /// <summary>
-        /// grdGioHang control.
+        /// grdBagDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdGioHang;
+        protected global::System.Web.UI.WebControls.GridView grdBagDetail;
         
         /// <summary>
         /// LiteralTongtien control.

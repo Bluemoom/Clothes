@@ -18,7 +18,7 @@ namespace PTXDPM.Customer
                 // Lấy ID từ URL
                 string ID = Request.QueryString["ID"];
                 // Load danh sách sản phẩm lên listview
-                listproduct.DataSource = orderClothesUI.ShowClothesByGroup(ID);
+                listproduct.DataSource = orderClothesUI.ShowClothByGroup(ID);
                 listproduct.DataBind();
             }
         }

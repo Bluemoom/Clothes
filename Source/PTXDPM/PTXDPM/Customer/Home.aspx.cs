@@ -13,12 +13,17 @@ namespace PTXDPM.Customer
         OrderControl orderControl = new OrderControl();
         protected void Page_Load(object sender, EventArgs e)
         {
+            string ID = Request.QueryString["state"];
+            if(ID!=null)
+            {
+                Session["Customer"] = null;
+            }
             if (!IsPostBack)
             {
-                listGroup.DataSource = orderControl.ShowGroup(6);
-                listGroup.DataBind();
-                listproduct.DataSource = orderControl.ShowNewClothes(20);
-                listproduct.DataBind();
+                dlGroupCloth.DataSource = orderControl.ShowGroup(6);
+                dlGroupCloth.DataBind();
+                dlCloth.DataSource = orderControl.ShowNewCloth(8);
+                dlCloth.DataBind();
             }
             Session["OrderControl"] = orderControl;
         }

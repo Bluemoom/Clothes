@@ -13,21 +13,21 @@ namespace PTXDPM.Customer {
     public partial class Home {
         
         /// <summary>
-        /// listGroup control.
+        /// dlGroupCloth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList listGroup;
+        protected global::System.Web.UI.WebControls.DataList dlGroupCloth;
         
         /// <summary>
-        /// listproduct control.
+        /// dlCloth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList listproduct;
+        protected global::System.Web.UI.WebControls.DataList dlCloth;
     }
 }

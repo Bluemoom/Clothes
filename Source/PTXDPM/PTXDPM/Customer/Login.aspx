@@ -5,18 +5,19 @@
 		 <div class="registration_form">
 		 <!-- Form -->
 			<form id="registration_form" method="post">
+                <asp:Label ID="lbThongBao" runat="server" Text="Label"></asp:Label>
 				<div>
 					<label>
-					 <asp:TextBox ID="txtTenDangNhap" placeholder="Tên đăng nhập" runat="server" Width="500px" required=""></asp:TextBox>
+					 <asp:TextBox ID="txtUsename" placeholder="Tên đăng nhập" runat="server" Width="500px" required=""></asp:TextBox>
 					</label>
 				</div>
 				<div>
 					<label>
-						 <asp:TextBox ID="txtMatKhau" placeholder="Mật khẩu" runat="server" Width="500px" required=""></asp:TextBox>
+						 <asp:TextBox ID="txtPassword" placeholder="Mật khẩu" type="password" runat="server" Width="500px" required=""></asp:TextBox>
 					</label>
 				</div>						
 				<div>
-					<input type="submit" value="Đăng nhập" id="register-submit">
+					<asp:Button ID="btnDangNhap" runat="server" Text="Đặng nhập"  OnClick="btnDangNhap_Click" />
 				</div>
 			</form>
 			<!-- /Form -->

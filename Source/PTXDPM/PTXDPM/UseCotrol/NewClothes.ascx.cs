@@ -17,7 +17,7 @@ namespace PTXDPM.UseCotrol
             OrderControl orderClothesUI = new OrderControl();
             if (!IsPostBack)
             {
-                listproduct.DataSource = orderClothesUI.ShowNewClothes(20);
+                listproduct.DataSource = orderClothesUI.ShowNewCloth(20);
                 listproduct.DataBind();
             }
 

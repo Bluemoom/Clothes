@@ -16,6 +16,7 @@ namespace PTXDPM.UseCotrol
         {
             if (!IsPostBack)
             {
+                lbDangXuat.Visible = false;
                 if (Session["Bag"] == null)
                 {
                     lbTongTien.Text = "0 VNĐ";
@@ -27,6 +28,14 @@ namespace PTXDPM.UseCotrol
                     gh.CaculatorTotalPrice();
                     lbTongTien.Text = (gh.totalPrice).ToString() + " VNĐ";
                     lbSoLuong.Text = gh.listClothes.Count().ToString() + " hàng";
+                }
+
+                if(Session["Customer"] !=null)
+                {
+                    Data.Customer customer = (Data.Customer)Session["Customer"];
+                    lbLogin.Text = customer.name.ToUpper();
+                    lbDangXuat.Visible = true;
+                    lbRegister.Visible = false;
                 }
             }
         }

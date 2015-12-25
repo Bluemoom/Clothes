@@ -13,12 +13,12 @@ namespace PTXDPM.Customer {
     public partial class ClothDetail {
         
         /// <summary>
-        /// DLChiTiet control.
+        /// dlDetailCloth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DLChiTiet;
+        protected global::System.Web.UI.WebControls.DataList dlDetailCloth;
     }
 }

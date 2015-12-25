@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="BagDetail.aspx.cs" Inherits="PTXDPM.Customer.BagDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class ="BagDetail">
-    <asp:GridView ID="grdGioHang" runat="server" AutoGenerateColumns="False" CellPadding="4" OnRowCommand="grdGioHang_RowCommand" ForeColor="#333333" GridLines="None" Width="100%">
+    <asp:GridView ID="grdBagDetail" runat="server" AutoGenerateColumns="False" CellPadding="4" OnRowCommand="grdGioHang_RowCommand" ForeColor="#333333" GridLines="None" Width="100%">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="MÃ" />

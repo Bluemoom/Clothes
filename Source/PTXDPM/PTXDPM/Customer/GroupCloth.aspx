@@ -8,7 +8,7 @@
             <asp:DataList ID="listproduct" runat="server" RepeatColumns="4" Width="100%" RepeatDirection="Horizontal">
                 <ItemTemplate>
                     <div class="showProduct">
-                        <a href="DetailClothes.aspx?ID=<%#Eval("ID") %>">
+                        <a href="ClothDetail.aspx?ID=<%#Eval("ID") %>">
                             <img src="<%#Eval("Images") %>" class="img-responsive" alt=""></a>
                         <!-- Load trang chi tiet va hinh anh tu database vao day -->
                         <div class="special-info grid_1 simpleCart_shelfItem">

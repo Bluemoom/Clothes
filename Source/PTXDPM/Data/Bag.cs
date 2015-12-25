@@ -46,23 +46,23 @@ namespace Data
 
         public DataTable ShowDetail()
         {
-            DataTable tbl = new DataTable();
-            tbl.Columns.Add("ID");
-            tbl.Columns.Add("Name");
-            tbl.Columns.Add("Images");
-            tbl.Columns.Add("Quantity");
-            tbl.Columns.Add("TotalPrice");
+            DataTable dtBagDetail = new DataTable();
+            dtBagDetail.Columns.Add("ID");
+            dtBagDetail.Columns.Add("Name");
+            dtBagDetail.Columns.Add("Images");
+            dtBagDetail.Columns.Add("Quantity");
+            dtBagDetail.Columns.Add("TotalPrice");
             foreach (Cloth item in listClothes)
             {
-                DataRow dr = tbl.NewRow();
+                DataRow dr = dtBagDetail.NewRow();
                 dr["ID"] = item.id.ToString();
                 dr["Name"] = item.name;
                 dr["Images"] = item.images;
                 dr["Quantity"] = item.quantity;
                 dr["TotalPrice"] = (double.Parse(item.quantity) * double.Parse(item.priceOut)).ToString();
-                tbl.Rows.Add(dr);
+                dtBagDetail.Rows.Add(dr);
             }
-            return tbl;
+            return dtBagDetail;
         }
 
         public void CaculatorTotalPrice()

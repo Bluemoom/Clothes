@@ -54,6 +54,33 @@ namespace Data
             this.status = dr["Status"].ToString();
         }
 
+        public static Cloth FindClothByID(string _id)
+        {
+            Cloth temp = new Cloth();
+            temp.id = _id;
+            ConnectDB db = new ConnectDB();
+            SqlParameter[] a = new SqlParameter[1];
+            a[0] = new SqlParameter("@ID", "" + temp.id + "");
+            DataTable dt = db.ReturnDataTable("Clothes_SelectByID", a);
+            DataRow dr = dt.Rows[0];
+            temp.colorID = dr["ID"].ToString();
+            temp.name = dr["Name"].ToString();
+            temp.groupClothesID = dr["GroupClothesID"].ToString();
+            temp.description = dr["Description"].ToString();
+            temp.priceIn = dr["PriceIn"].ToString();
+            temp.priceOut = dr["PriceOut"].ToString();
+            temp.newPrice = dr["NewPrice"].ToString();
+            temp.sex = dr["Sex"].ToString();
+            temp.colorID = dr["ColorID"].ToString();
+            temp.sizeID = dr["SizeID"].ToString();
+            temp.images = dr["Images"].ToString();
+            temp.materialID = dr["MaterialID"].ToString();
+            temp.quantity = "1"; // Trường hợp truy vấn để thêm vào giỏ nên số lượng cần lấy là 1
+            temp.order = dr["Order"].ToString();
+            temp.status = dr["Status"].ToString();
+            return temp;
+        }
+
         public Cloth(string _id, string _name, string _gID, string _des, string _pricein, string priceout, string _newprice, string _sex, string _colorID, string _sizeID, string _images, string _materialID, string _quantity, string _order, string _status)
         {
             this.id = _id;
@@ -84,8 +111,8 @@ namespace Data
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[1];
             a[0] = new SqlParameter("@ID", "" + this.id + "");
-            DataTable dt = db.ReturnDataTable("Clothes_SelectByID", a);
-            return dt;
+            DataTable dtClothDetail = db.ReturnDataTable("Clothes_SelectByID", a);
+            return dtClothDetail;
         }
     }
 }

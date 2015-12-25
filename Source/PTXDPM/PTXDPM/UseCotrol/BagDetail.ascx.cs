@@ -71,7 +71,10 @@ namespace PTXDPM.UseCotrol
 
         private void showBagDetail()
         {
-            grdGioHang.DataSource = orderClothesUI.ShowBagDetail();
+            OrderControl orderControl = (OrderControl)Session["OrderControl"];
+            orderControl.bag.CaculatorTotalPrice();
+            lbTongTien.Text = orderControl.bag.totalPrice.ToString() + " VNĐ";
+            grdGioHang.DataSource = orderControl.bag.ShowDetail();
             grdGioHang.DataBind();
         }
     }

@@ -14,7 +14,7 @@ namespace Data
         public static void MoKetNoi()
         {
             if (ConnectDB.connect == null)
-                ConnectDB.connect = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Clothes;Integrated Security=True");
+                ConnectDB.connect = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Cloth;Integrated Security=True");
             if (ConnectDB.connect.State != ConnectionState.Open)
                 ConnectDB.connect.Open();
         }
