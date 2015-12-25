@@ -34,17 +34,13 @@ namespace PTXDPM.Customer
             }
             else
             {
-                ClientScript.RegisterClientScriptBlock(this.ClientScript.GetType(), "", "<script language='javascript'>alert('Tên đăng nhập hoặc Mật khẩu không đúng');</script>");
-            //    Response.Redirect(Request.RawUrl);
-              //  DisplayError();
+                DisplayError();
             } 
         }
 
         private void DisplayError()
         {
-            lbThongBao.Text = "UserName hoặc mật khẩu không đúng";
-            lbThongBao.Visible = true;
-            Response.Redirect(Request.RawUrl);
+            ClientScript.RegisterClientScriptBlock(this.ClientScript.GetType(), "", "<script language='javascript'>alert('Tên đăng nhập hoặc Mật khẩu không đúng');</script>");
         }
     }
 }

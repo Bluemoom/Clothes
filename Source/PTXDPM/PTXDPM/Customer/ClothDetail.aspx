@@ -45,27 +45,22 @@
 						</div>
 					</div>
 
-
+                <%--Hiển thị chi tiết sản phẩm--%>
                  <div class="desc1 span_3_of_2">
-                <h3><%#Eval("Name") %></h3>
-
-                <span class="brand">Nhãn hiệu: <a href="#"><%#Eval("GroupClothesID") %> </a></span>
-
+                <h4><%#Eval("Name") %></h4>
+                <span class="brand">Loại sản phẩm: <a href="GroupClothes.aspx?ID=<%#Eval("GroupClothesID") %>"><%#Eval("GroupName") %> </a></span>
                 <br>
-                <span class="code">Mã sản phẩm: <%#Eval("ID") %></span>
-
-<%--                <p><%#Eval("Description") %></p>--%>
-                <!-- Description -->
+                <span class="code">Mã sản phẩm: <%#Eval("ID") %></span><br />
+                <span class="code">Chất liệu: <%#Eval("MaterialName") %></span>
                 <div class="price">
                     <span class="text">Price:</span>
                     <span class="price-new"><%#Eval("NewPrice") %> VNĐ</span><span class="price-old"><%#Eval("PriceOut") %> VNĐ</span> <br />
-                    <span class="price-tax">Đồ Nam</span><br>
-					<%--<span class="points"><small>Số lượng còn lại: <%#Eval("Quantity") %></small></span><br>--%>
-					<span class="points">Số lượng còn lại: <%#Eval("Quantity") %></span><br>
+					<span class="code">Số lượng còn lại:</span>
+                    <span class="price-new"><%#Eval("Quantity") %></span><br />
                 </div>
                 <div class="det_nav1">
-                    <h4>Chọn kích cỡ :</h4>
-                    <div class=" sky-form col col-4">
+                    <%--<h4>Chọn kích cỡ :</h4>--%>
+                  <%--  <div class=" sky-form col col-4">--%>
                       <%--  <ul>
                             <li>
                                 <label class="checkbox">
@@ -80,12 +75,12 @@
                                 <label class="checkbox">
                                     <input type="checkbox" name="checkbox"><i></i>XL</label></li>
                         </ul>--%>
-                    </div>
+                   <%-- </div>--%>
                 </div>
                 <div class="btn_form">
                     <a href="BagDetail.aspx?ID=<%#Eval("ID") %>">Đặt mua</a>
                 </div>
-                <a href="#"><span>Đăng nhập để được giảm giá </span></a>
+                <a href="Login.aspx"><span>Đăng nhập để được giảm giá </span></a>
             </div>
           	    <div class="clearfix"></div>
                       </div>

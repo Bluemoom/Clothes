@@ -9,29 +9,25 @@ using System.Threading.Tasks;
 namespace Data
 {
     // Lớp điều khiển
-    public class OrderControl
+    public class OrderClothesUI
     {
         public Order order { get; set; }
         public Bag bag { get; set; }
         public Customer customer { get; set; }
-        public Cloth chonseCloth { get; set; }
+        public Clothes chonseClothes { get; set; }
 
-        public OrderControl() {
-            this.order = new Order();
-            this.customer = new Customer();
-            this.bag = new Bag();
-        }
+        public OrderClothesUI() { }
 
-        public OrderControl(Order _order,Bag _bag,Customer _customer,Cloth _chonseClothes)
+        public OrderClothesUI(Order _order,Bag _bag,Customer _customer,Clothes _chonseClothes)
         {
             this.order = _order;
             this.bag = _bag;
             this.customer = _customer;
-            this.chonseCloth = _chonseClothes;
+            this.chonseClothes = _chonseClothes;
         }
 
         // Tìm kiếm danh sách Clothes theo nhiều trường
-        public DataTable ShowClothByOptions(int _c,string _ColorID, string _sizeID, string _pricemin,string _pricemax )
+        public DataTable showClothesByOptions(int _c,string _ColorID, string _sizeID, string _pricemin,string _pricemax )
         {
             ConnectDB db = new ConnectDB();
             if (_c ==1)
@@ -65,19 +61,19 @@ namespace Data
         }
 
         // Hàm lấy danh sách sản phẩm mới truyền vào số lượng sản phẩm muốn lấy
-        public DataTable ShowNewCloth(int _sl)
+        public DataTable showNewClothes(int _sl)
         {
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
             a[0] = new SqlParameter("@Top", ""+_sl+"");
-            a[1] = new SqlParameter("@where", "status =1");
+            a[1] = new SqlParameter("@where", "status =1 and New = 1");
             a[2] = new SqlParameter("@order", "[Order] Desc");
-            DataTable dtNewCloth = db.ReturnDataTable("Clothes_SelectByTop", a);
-            return dtNewCloth;
+            DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
+            return dt;
         }
 
         // Hàm lấy danh sách sản phẩm theo nhóm sản phẩm, truyền vào nhóm sản phẩm
-        public DataTable ShowClothByGroup(string _groupID)
+        public DataTable showClothesByGroup(string _groupID)
         {
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
@@ -89,19 +85,26 @@ namespace Data
         }
 
         // Hàm lấy chi tiết sản phẩm, truyền vào mã sản phẩm
-        public DataTable ShowClothByID(string _id)
+        public DataTable showClothesByID(string _id)
         {
-           chonseCloth = Cloth.FindClothByID(_id);
-           return chonseCloth.ShowDetail();
+           chonseClothes = new Clothes(_id);
+           return chonseClothes.showDetail();
         }
 
         // Hàm thêm sản phẩm vào giỏ hàng, truyền vào ID sản phẩm
-        public void AddClothToBag(string _id)
+        public void addClothesToBag(string _id)
         {
-            bag.AddCloth(_id);
+            bag.addClothes(_id);
         }
+
+        // Hàm lấy chi tiết giỏ hàng
+        public DataTable showBagDetail()
+        {  
+            return bag.showDetail();
+        }
+
         // Hàm tạo đơn hàng 
-        public void CreateOrder(string _name,string _email,string _address,string _phonenumber)
+        public void createOrder(string _name,string _email,string _address,string _phonenumber)
         {
             string date = "";
             customer = new Customer(_name, _email, _address, _phonenumber);
@@ -109,15 +112,15 @@ namespace Data
         }
 
         // Hàm lấy danh sách nhóm sản phẩm, truyền vào số lượng cần lấy
-        public DataTable ShowSpeciaCloth(int _sl)
+        public DataTable ShowGroup(int _sl)
         {
             ConnectDB db = new ConnectDB();
             SqlParameter[] a = new SqlParameter[3];
             a[0] = new SqlParameter("@Top", "" + _sl + "");
-            a[1] = new SqlParameter("@where", "status =1 and New = 1");
-            a[2] = new SqlParameter("@order", "[Order] Desc");
-            DataTable dtNewCloth = db.ReturnDataTable("Clothes_SelectByTop", a);
-            return dtNewCloth;
+            a[1] = new SqlParameter("@where", "");
+            a[2] = new SqlParameter("@order", "");
+            DataTable dt = db.ReturnDataTable("GroupClothes_SelectByTop", a);
+            return dt;
         }
     }
 }

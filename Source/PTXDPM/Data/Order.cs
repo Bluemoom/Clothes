@@ -25,8 +25,6 @@ namespace Data
 
             ConnectDB db = new ConnectDB();
 
-            //Lấy ID của khách hàng vừa tạo
-
             SqlParameter[] b = new SqlParameter[4];
             b[0] = new SqlParameter("@CustomerID", _customer.id);
             b[1] = new SqlParameter("@TotalPrice", bag.totalPrice);
@@ -47,6 +45,17 @@ namespace Data
                 a[2] = new SqlParameter("@Quantity", item.quantity);
                 db.ExecuteCommand("OrderDetail_Insert", a);
             }
+
+            // Giảm số lượng các hàng hóa được đặt mua
+            SqlParameter[] c = new SqlParameter[2];
+            foreach (Cloth item in _bag.listClothes)
+            {
+                c[0] = new SqlParameter("@ID",item.id);
+                c[1] = new SqlParameter("@Quantity",int.Parse(item.quantity));
+                db.ExecuteCommand("Clothes_UpdateQuantity", c);
+            }
+            
+
         }
         public void PrintOrder()
         { }

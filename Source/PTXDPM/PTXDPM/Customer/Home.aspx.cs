@@ -22,6 +22,9 @@ namespace PTXDPM.Customer
             {
                 dlCloth.DataSource = orderControl.ShowNewCloth(8);
                 dlCloth.DataBind();
+
+                dlSpeciaCloth.DataSource = orderControl.ShowSpeciaCloth(8);
+                dlSpeciaCloth.DataBind();
             }
             Session["OrderControl"] = orderControl;
         }

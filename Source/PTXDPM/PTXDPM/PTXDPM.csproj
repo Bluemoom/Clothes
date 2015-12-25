@@ -183,6 +183,13 @@
     <Content Include="Customer\FinishOrder.aspx" />
     <Content Include="Customer\GroupClothes.aspx" />
     <Content Include="Customer\Home.aspx" />
+    <Content Include="Customer\Images\030215-cp-pink_headers_all-apparel-1.jpg" />
+    <Content Include="Customer\Images\032415_Landing_desktop_hdr.jpg" />
+    <Content Include="Customer\Images\11-031915-pnk-home-sub-apparel-RE.jpg" />
+    <Content Include="Customer\Images\11-040215-pnk-home-sub-tee %281%29.jpg" />
+    <Content Include="Customer\Images\11-042115-cp-pink_hdrs_APPAREL.jpg" />
+    <Content Include="Customer\Images\11-060415-pnk-home-apparel-v2.jpg" />
+    <Content Include="Customer\Images\11-060915-pnk-home-ultimate-1.jpg" />
     <Content Include="Customer\Images\ANKLE SOCKS SET_BLUE_80.jpg" />
     <Content Include="Customer\Images\ANORAK FULL-ZIP_LIME_108.jpg" />
     <Content Include="Customer\Images\ANORAK FULL-ZIP_YELLOW_30.jpg" />
@@ -326,6 +333,7 @@
     <Content Include="Customer\Images\LOW BACK TANK_PINK_109.jpg" />
     <Content Include="Customer\Images\LOW BACK TANK_PINK_31.jpg" />
     <Content Include="Customer\Images\LOW BACK TANK_YELLOW_110.jpg" />
+    <Content Include="Customer\Images\magnifying_glass.png" />
     <Content Include="Customer\Images\MESH LAUNDRY BAG_CYAN_69.jpg" />
     <Content Include="Customer\Images\OPEN BACK VARSITY CREW TEE_BLACK_11.jpg" />
     <Content Include="Customer\Images\OPEN BACK VARSITY CREW TEE_BLACK_12.jpg" />
@@ -495,8 +503,9 @@
     <Content Include="Customer\Images\WATER BOTTLE_CYAN_83.jpg" />
     <Content Include="Customer\Images\ZIP HALTER ONE-PIECE_BLACK_284.jpg" />
     <Content Include="Customer\Images\ZIP HALTER ONE-PIECE_BLACK_285.jpg" />
+    <Content Include="Customer\Images\Zoom_search_find_magnifying_glass.png" />
     <Content Include="Customer\Login.aspx" />
-    <Content Include="Customer\Order.aspx" />
+    <Content Include="Customer\OrderInfomation.aspx" />
     <Content Include="Customer\Register.aspx" />
     <Content Include="Customer\SearchByPrice.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -748,12 +757,12 @@
     <Compile Include="Customer\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Customer\OrderInfomation.aspx.cs">
+      <DependentUpon>OrderInfomation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Customer\OrderInfomation.aspx.designer.cs">
+      <DependentUpon>OrderInfomation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

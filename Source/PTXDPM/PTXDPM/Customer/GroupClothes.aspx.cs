@@ -12,13 +12,16 @@ namespace PTXDPM.Customer
 {
     public partial class GroupClothes : System.Web.UI.Page
     {
+
         Cloth clo = new Cloth();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                ConnectDB db = new ConnectDB();
                 ViewState["id"] = Request.QueryString["id"];
                 ViewState["Name"] = Request.QueryString["Name"];
+                lbGroupName.Text = db.GetData("Select Name from GroupClothes where id = ", "Name", ViewState["id"].ToString());
                 if (ViewState["id"] != null)
                 {
                     listproduct.DataSource = clo.showdata(Convert.ToInt32(ViewState["id"]));

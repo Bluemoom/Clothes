@@ -40,7 +40,7 @@
     <h4>Tổng tiền</h4><asp:Label ID="lbTongTien" runat="server" Text="0 VNĐ"></asp:Label>
     <h4>Chi phí vận chuyển</h4><asp:Label ID="lb1" runat="server" Text="0 VNĐ"></asp:Label>
      <div class="btn_form">
-                    <a href="Order.aspx">ĐẶT HÀNG</a>
+                    <a href="OrderInfomation.aspx">ĐẶT HÀNG</a>
      </div>
 </div>
 </asp:Content>
