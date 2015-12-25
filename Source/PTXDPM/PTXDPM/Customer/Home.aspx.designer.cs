@@ -13,13 +13,31 @@ namespace PTXDPM.Customer {
     public partial class Home {
         
         /// <summary>
-        /// dlGroupCloth control.
+        /// GroupClothes_Control1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlGroupCloth;
+        protected global::PTXDPM.UseCotrol.GroupClothes_Control GroupClothes_Control1;
+        
+        /// <summary>
+        /// rblTimGiaTrongKhoan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblTimGiaTrongKhoan;
+        
+        /// <summary>
+        /// img_search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton img_search;
         
         /// <summary>
         /// dlCloth control.

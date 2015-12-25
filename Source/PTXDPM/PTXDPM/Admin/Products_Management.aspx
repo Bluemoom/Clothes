@@ -1,91 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Products_Management.aspx.cs" Inherits="PTXDPM.Admin.Products_Management" EnableEventValidation="false" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            width: 151px;
-        }
-        .auto-style2 {
-            width: 151px;
-            height: 318px;
-            left: 0px;
-            top: 22px;
-        }
-        .auto-style8 {
-            font-size: 12pt;
-        }
-        .auto-style17 {
-            height: 37px;
-            font-size: 11pt;
-        }
-        .auto-style18 {
-            width: 328px;
-            font-size: 11pt;
-            height: 39px;
-        }
-        .auto-style19 {
-            height: 39px;
-            width: 139px;
-        }
-        .auto-style20 {
-            height: 39px;
-            width: 328px;
-        }
-        .auto-style21 {
-            height: 39px;
-            width: 100px;
-        }
-        .auto-style22 {
-            height: 39px;
-        }
-        .auto-style23 {
-            height: 40px;
-            width: 139px;
-        }
-        .auto-style24 {
-            height: 40px;
-            width: 328px;
-        }
-        .auto-style25 {
-            height: 40px;
-            width: 100px;
-        }
-        .auto-style26 {
-            height: 40px;
-        }
-        .auto-style27 {
-            height: 37px;
-            width: 139px;
-        }
-        .auto-style28 {
-            height: 37px;
-            width: 328px;
-        }
-        .auto-style29 {
-            height: 37px;
-            width: 100px;
-        }
-        .auto-style30 {
-            text-align: center;
-            height: 77px;
-        }
-        .auto-style32 {
-            text-align: left;
-            height: 51px;
-        }
-        .auto-style33 {
-            height: 140px;
-        }
-        .auto-style34 {
-            width: 100%;
-            height: 560px;
-        }
-        .auto-style35 {
-            height: 25px;
-        }
-    </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
@@ -109,7 +22,7 @@
                         <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
                             <asp:DropDownList ID="drcolorid" runat="server" DataSourceID="SqlDataSource3" Height="22px" Width="101px">
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ClothesConnectionString %>" SelectCommand="SELECT [ID] FROM [Color] ORDER BY [ID]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Color]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
@@ -121,7 +34,7 @@
                         <td class="auto-style26" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
                             <asp:DropDownList ID="drsizeid" runat="server" DataSourceID="SqlDataSource4" Height="22px" Width="101px">
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ClothesConnectionString %>" SelectCommand="SELECT [ID] FROM [Size] ORDER BY [ID]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Size]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
@@ -129,7 +42,7 @@
                         <td class="auto-style28" style="border: thin solid #f5f5f5">
                             <asp:DropDownList ID="drgroupclothes" runat="server" DataSourceID="SqlDataSource2" DataTextField="ID" Height="22px" Width="118px">
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ClothesConnectionString %>" SelectCommand="SELECT [ID] FROM [GroupClothes] ORDER BY [ID]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [GroupClothes]"></asp:SqlDataSource>
                         </td>
                         <td class="auto-style29" style="border: thin solid #f5f5f5">HÌNH ẢNH</td>
                         <td class="auto-style17" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
@@ -139,13 +52,14 @@
                     <tr>
                         <td class="auto-style19" style="border: thin solid #f5f5f5">MÔ TẢ</td>
                         <td class="auto-style20" style="border: thin solid #f5f5f5">
-                            <asp:TextBox ID="txtdescription" runat="server" Width="255px"></asp:TextBox>
-                        </td>
+                           
+                            <asp:TextBox ID="txtdescription" runat="server" Width="290px"></asp:TextBox>
+                           
                         <td class="auto-style21" style="border: thin solid #f5f5f5">CHẤT LIỆU ID</td>
                         <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
                             <asp:DropDownList ID="drmaterialid" runat="server" DataTextField="ID" DataSourceID="SqlDataSource5" Height="22px">
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ClothesConnectionString %>" SelectCommand="SELECT [ID] FROM [Material] ORDER BY [ID]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Material]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
@@ -200,25 +114,27 @@
                     </tr>
                     <tr>
                         <td class="auto-style33" colspan="4" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" PageSize="5">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                                DataKeyNames="ID" DataSourceID="SqlDataSource1" BackColor="White" 
+                                BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" 
+                                GridLines="Vertical" AllowPaging="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" PageSize="5">
                                 <AlternatingRowStyle BackColor="White" />
                                 <Columns>
-                                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                                    <asp:BoundField DataField="Name" HeaderText="Tên" SortExpression="Name" />
-                                    <asp:BoundField DataField="GroupClothesID" HeaderText="Nhóm hàng hóa" SortExpression="GroupClothesID" />
-                                    <asp:BoundField DataField="Description" HeaderText="Mô tả" SortExpression="Description" />
-                                    <asp:BoundField DataField="PriceIN" HeaderText="Giá nhập" SortExpression="PriceIN" />
-                                    <asp:BoundField DataField="PriceOUT" HeaderText="Giá bán" SortExpression="PriceOUT" />
-                                    <asp:BoundField DataField="NewPrice" HeaderText="Giá mới" SortExpression="NewPrice" />
-                                    <asp:BoundField DataField="Sex" HeaderText="Giới tính" SortExpression="Sex" />
-                                    <asp:BoundField DataField="ColorID" HeaderText="Nhóm màu" SortExpression="ColorID" />
-                                    <asp:BoundField DataField="SizeID" HeaderText="Nhóm size" SortExpression="SizeID" />
-                                    <asp:BoundField DataField="Images" HeaderText="Hình ảnh" SortExpression="Images" />
-                                    <asp:BoundField DataField="MaterialID" HeaderText="Nhóm chất liệu" SortExpression="MaterialID" />
-                                    <asp:BoundField DataField="Quantity" HeaderText="Số lượng" SortExpression="Quantity" />
-                                    <asp:BoundField DataField="Status" HeaderText="Trạng thái" SortExpression="Status" />
-                                    <asp:BoundField DataField="Order" HeaderText="Đặt hàng" SortExpression="Order" />
+                                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                                    <asp:BoundField DataField="GroupClothesID" HeaderText="GroupClothes" SortExpression="GroupClothesID" />
+                                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                                    <asp:BoundField DataField="PriceIN" HeaderText="PriceIN" SortExpression="PriceIN" />
+                                    <asp:BoundField DataField="PriceOUT" HeaderText="PriceOUT" SortExpression="PriceOUT" />
+                                    <asp:BoundField DataField="NewPrice" HeaderText="NewPrice" SortExpression="NewPrice" />
+                                    <asp:BoundField DataField="Sex" HeaderText="Sex" SortExpression="Sex" />
+                                    <asp:BoundField DataField="ColorID" HeaderText="Color" SortExpression="ColorID" />
+                                    <asp:BoundField DataField="SizeID" HeaderText="Size" SortExpression="SizeID" />
+                                    <asp:BoundField DataField="Images" HeaderText="Images" SortExpression="Images" />
+                                    <asp:BoundField DataField="MaterialID" HeaderText="Material" SortExpression="MaterialID" />
+                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
+                                    <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                                    <asp:BoundField DataField="Order" HeaderText="Order" SortExpression="Order" />
                                     <asp:BoundField DataField="New" HeaderText="New" SortExpression="New" />
                                 </Columns>
                                 <FooterStyle BackColor="#CCCC99" />
@@ -232,8 +148,8 @@
                                 <SortedDescendingHeaderStyle BackColor="#575357" />
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                                ConnectionString="<%$ ConnectionStrings:ClothesConnectionString %>" 
-                                SelectCommand="SELECT * FROM [Clothes] ORDER BY [ID]"
+                                ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" 
+                                SelectCommand="SELECT * FROM [Clothes]"
                                 UpdateCommand="Update [Clothes] SET Name=@Name,GroupClothesID=@GroupClothesID,Description=@Description,PriceIN=@PriceIN,PriceOUT=@PriceOUT,NewPrice=@NewPrice,Sex=@Sex,ColorID=@ColorID,SizeID=@SizeID,Images=@Images,MaterialID=@MaterialID,Quantity=@Quantity,Status=@Status,[Order]=@Order,New=@New  where ID = @ID"
                                 DeleteCommand="Delete From [Clothes] where ID = @ID "
                                 >
@@ -246,7 +162,7 @@
                                     <asp:Parameter Name="PriceIN" Type ="Double" />
                                     <asp:Parameter Name="PriceOUT" Type ="Double" />
                                     <asp:Parameter Name="NewPrice" Type ="Double" />
-                                    <asp:Parameter Name="Sex" Type ="string" />
+                                    <asp:Parameter Name="Sex" Type ="Int32" />
                                     <asp:Parameter Name="ColorID" Type ="int32" />
                                     <asp:Parameter Name="SizeID" Type ="int32" />
                                     <asp:Parameter Name="Images" Type ="string" />
@@ -260,6 +176,7 @@
                                 <DeleteParameters>
                                     <asp:Parameter Name="ID" Type ="String" />
                                 </DeleteParameters>
+
                             </asp:SqlDataSource>
                         </td>
                     </tr>

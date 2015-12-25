@@ -114,5 +114,106 @@ namespace Data
             DataTable dtClothDetail = db.ReturnDataTable("Clothes_SelectByID", a);
             return dtClothDetail;
         }
+        // Hàm tìm kiếm hàng giá <200
+        public DataTable Searchmin(int InPrice)
+        {
+            try
+            {
+                ConnectDB.MoKetNoi();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Clothes where PriceOUT < '" + InPrice + "'", ConnectDB.connect);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ConnectDB.DongKetNoi();
+            }
+        }
+        // Hàm tìm kiếm hàng 200<x<500
+        public DataTable Searchnormal(int Price1, int Price2)
+        {
+            try
+            {
+                ConnectDB.MoKetNoi();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Clothes where PriceOUT < '" + Price2 + "' and PriceOUT > '" + Price1 + "'", ConnectDB.connect);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ConnectDB.DongKetNoi();
+            }
+        }
+        // Hàm tìm kiếm hàng x>500
+        public DataTable Searchmax(int InPrice)
+        {
+            try
+            {
+                ConnectDB.MoKetNoi();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Clothes where PriceOUT > '" + InPrice + "'", ConnectDB.connect);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ConnectDB.DongKetNoi();
+            }
+        }
+        // Hàm tìm kiếm hàng hóa theo nhóm
+        public DataTable showdata(int ID)
+        {
+            try
+            {
+                ConnectDB.MoKetNoi();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Clothes where GroupClothesID = '" + ID + "'", ConnectDB.connect);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ConnectDB.DongKetNoi();
+            }
+        }
+        // Hàm tìm kiếm theo tên
+
+        public DataTable SearchName(string s)
+        {
+            try
+            {
+                ConnectDB.MoKetNoi();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Clothes where Clothes.Name like'%" + s + "%'", ConnectDB.connect);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ConnectDB.DongKetNoi();
+            }
+        }
     }
 }

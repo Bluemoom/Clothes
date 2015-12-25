@@ -1,26 +1,98 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="PTXDPM.Customer.Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="PTXDPM.Customer.Home" EnableEventValidation="false" %>
+<%@ Register src="../UseCotrol/GroupClothes_Control.ascx" tagname="GroupClothes_Control" tagprefix="uc1" %>
 <%--<%@ Register Src="~/UseCotrol/NewClothes.ascx" TagName="NewClothes" TagPrefix="UC" %>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="arriv">
-        <div class="container">
-            <div class="ListGroup">
-                <asp:DataList ID="dlGroupCloth" runat="server" RepeatColumns="3" Width="100%" RepeatDirection="Horizontal">
-                    <ItemTemplate>
-                        <div class="ChiaBaCot">
-                            <img src="<%#Eval("Images") %>" class="img-responsive" alt="">
-                            <div class="TenNhom">
-                                <h3><%#Eval("Name") %></h3>
-                                <div class="XemThem">
-                                    <a href="GroupCloth.aspx?ID=<%#Eval("ID")%>">XEM NGAY</a>
-                                </div>
-                            </div>
+     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Nivoslider/nivo-slider.css" rel="stylesheet" />
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../Nivoslider/jquery.nivo.slider.js"></script>
+    <script src="../Nivoslider/jquery.nivo.slider.pack.js"></script> 
+    <style type="text/css">
+        .auto-style1 {
+            width: 205px;
+        }
+        .auto-style3 {
+            width: 179px;
+            height: 40px;
+        }
+        .auto-style4 {
+            height: 35px;
+            width: 179px;
+        }
+        .auto-style6 {
+            width: 179px;
+        }
+        .auto-style7 {
+            height: 28px;
+            width: 179px;
+        }
+        .auto-style8 {
+            height: 38px;
+            width: 179px;
+        }
+        .auto-style9 {
+            height: 32px;
+            width: 179px;
+        }
+        </style>      
+        <div class="arriv">      
+             <div id="beforeNAVMENU">
+            <table>
+                <tr>
+                    <td style="vertical-align:top" class="auto-style1">
+                        <table style="width:250px">
+                            <tr style="border-width: thin; border-color: black;">
+                                <td style="text-align:center;background-color:#e4e4e4;border-color:black; font-weight: bold;" class="auto-style3">DANH SÁCH</td>                                
+                            </tr>
+                            <tr >
+                                <td style="background-color:#e4e4e4;border-color:#e4e4e4" class="auto-style6">
+                                    <uc1:GroupClothes_Control ID="GroupClothes_Control1" runat="server" />
+                                </td>
+                            </tr>
+                            <tr style="border-color: black; border-width: thin">
+                                <td style="border-color: black; background-color: #e4e4e4; text-align:center; font-weight: bold;" class="auto-style4">
+
+                                    TÌM KIẾM</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #e4e4e4;font-size:14px;text-align:left" class="auto-style7">
+                                    CHỌN GIÁ:
+                                </td>
+                            </tr>
+                             <tr>              
+                                <td style="background-color: #e4e4e4;font-size:14px;text-align:left" class="auto-style8">                                                                            
+                                    <div>
+                                        <asp:RadioButtonList ID="rblTimGiaTrongKhoan" runat="server" Width="245px">
+                                        <asp:ListItem Value="1">0 - 200 000</asp:ListItem>
+                                        <asp:ListItem Value="2">200 000 - 500 000</asp:ListItem>
+                                        <asp:ListItem Value="3">500 000 - 1 000 000</asp:ListItem>
+                                        <asp:ListItem Value="4">1 000 000 - 2 000 000</asp:ListItem>
+                                        <asp:ListItem Value="5">Trên 2 000 000</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                        <br />                                                                   
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #e4e4e4;text-align:right" class="auto-style9">
+                                    <asp:ImageButton ID="img_search" runat="server" Height="40px" Width="60px" CommandName="Timkiem" ImageUrl="~/Customer/Images/search.png" OnCommand="img_search_Command1" />
+                                </td>
+                            </tr>
+                         </table>
+                    </td>
+                    <td style="padding-left:40px;vertical-align:top">
+                        <div id="slider" class="nivoSlider">
+                            <img src="assets/images/7.jpg" />
+                            <img src="assets/images/10.jpg" />
+                            <img src="Images/Clothes/Kinh.jpg" />
+                            <img src="Images/Clothes/Kinh2.jpg" />
                         </div>
-                        <div class="clearfix"></div>
-                    </ItemTemplate>
-                </asp:DataList>
-            </div>
-        </div>
-    </div>
+                    </td>
+                </tr>
+            </table>
+         </div>             
+        </div>   
     <div class="special">
         <div class="container">
             <h3>Sản phẩm mới</h3>
@@ -49,4 +121,14 @@
             </asp:DataList>
         </div>
     </div>
+     <!--Div chay novi slider-->
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+                controlNav: false,
+                nextText: '',
+                prevText:'',
+            });
+        });
+    </script>
 </asp:Content>

@@ -42,8 +42,7 @@
 }
 	
 .skyblue li>a,.skyblue>li.showhide span{color:#3f3d3d}
-.skyblue>li:hover>a,.skyblue .dropdown li:hover>a{color:#555; background:#ffffff;}.
-skyblue .megapanel img:hover,.skyblue form.contact input[type="text"]:focus,.skyblue form.contact textarea:focus{}
+.skyblue>li:hover>a,.skyblue .dropdown li:hover>a{color:#555; background:#ffffff;}.skyblue .megapanel img:hover,.skyblue form.contact input[type="text"]:focus,.skyblue form.contact textarea:focus{}
 .skyblue form.contact input[type="submit"]{background:#00405d;text-transform:uppercase;}
 @media(max-width:1024px){
 	.megamenu>li>a {
@@ -125,4 +124,34 @@ skyblue .megapanel img:hover,.skyblue form.contact input[type="text"]:focus,.sky
 	color: #ffffff;
 }	
 
+#beforeNAVMENU
+{
+    margin-bottom:40px;
+    margin-top:35px;
+}
 
+#slider
+{
+    float:right;
+    width:750px;
+    height:500px;
+}
+#slider img
+{
+    width:750px;
+    height:500px;
+}
+.auto-style1
+{
+    border-color:#dbdbdb;
+}
+
+#headright img
+{
+    width:45px;
+    height:20px;
+}
+#headright button:hover
+{
+    background:#dbdbdb;
+}

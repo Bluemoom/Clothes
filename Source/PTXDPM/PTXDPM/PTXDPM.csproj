@@ -181,6 +181,7 @@
     <Content Include="Customer\BagDetail.aspx" />
     <Content Include="Customer\ClothDetail.aspx" />
     <Content Include="Customer\FinishOrder.aspx" />
+    <Content Include="Customer\GroupClothes.aspx" />
     <Content Include="Customer\Home.aspx" />
     <Content Include="Customer\Images\ANKLE SOCKS SET_BLUE_80.jpg" />
     <Content Include="Customer\Images\ANORAK FULL-ZIP_LIME_108.jpg" />
@@ -411,6 +412,7 @@
     <Content Include="Customer\Images\SCOOPNECK TEE_LIME_147.jpg" />
     <Content Include="Customer\Images\SCOOPNECK TEE_PINK_148.jpg" />
     <Content Include="Customer\Images\SCOOPNECK TEE_PINK_41.jpg" />
+    <Content Include="Customer\Images\search.png" />
     <Content Include="Customer\Images\SHEET SET_WHITE_73.jpg" />
     <Content Include="Customer\Images\SKINNY BOYFRIEND PANT_BLACK_20.jpg" />
     <Content Include="Customer\Images\SKINNY BOYFRIEND PANT_BLUE_19.jpg" />
@@ -496,7 +498,7 @@
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\Order.aspx" />
     <Content Include="Customer\Register.aspx" />
-    <Content Include="Customer\GroupCloth.aspx" />
+    <Content Include="Customer\SearchByPrice.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -542,6 +544,7 @@
     <Content Include="Site.Master" />
     <Content Include="UseCotrol\BagDetail.ascx" />
     <Content Include="UseCotrol\DetailClothes.ascx" />
+    <Content Include="UseCotrol\GroupClothes_Control.ascx" />
     <Content Include="UseCotrol\HeadRight.ascx" />
     <Content Include="UseCotrol\NewClothes.ascx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -724,6 +727,13 @@
     <Compile Include="Customer\FinishOrder.aspx.designer.cs">
       <DependentUpon>FinishOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\GroupClothes.aspx.cs">
+      <DependentUpon>GroupClothes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\GroupClothes.aspx.designer.cs">
+      <DependentUpon>GroupClothes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -752,12 +762,12 @@
     <Compile Include="Customer\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\GroupCloth.aspx.cs">
-      <DependentUpon>GroupCloth.aspx</DependentUpon>
+    <Compile Include="Customer\SearchByPrice.aspx.cs">
+      <DependentUpon>SearchByPrice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\GroupCloth.aspx.designer.cs">
-      <DependentUpon>GroupCloth.aspx</DependentUpon>
+    <Compile Include="Customer\SearchByPrice.aspx.designer.cs">
+      <DependentUpon>SearchByPrice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -806,6 +816,13 @@
     </Compile>
     <Compile Include="UseCotrol\DetailClothes.ascx.designer.cs">
       <DependentUpon>DetailClothes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UseCotrol\GroupClothes_Control.ascx.cs">
+      <DependentUpon>GroupClothes_Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UseCotrol\GroupClothes_Control.ascx.designer.cs">
+      <DependentUpon>GroupClothes_Control.ascx</DependentUpon>
     </Compile>
     <Compile Include="UseCotrol\HeadRight.ascx.cs">
       <DependentUpon>HeadRight.ascx</DependentUpon>

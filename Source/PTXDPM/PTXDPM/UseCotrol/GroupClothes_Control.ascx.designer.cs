@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTXDPM.Customer {
+namespace PTXDPM.UseCotrol {
     
     
-    public partial class GroupCloth {
+    public partial class GroupClothes_Control {
         
         /// <summary>
-        /// listproduct control.
+        /// grvgroupclothes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList listproduct;
+        protected global::System.Web.UI.WebControls.GridView grvgroupclothes;
+        
+        /// <summary>
+        /// lblerror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblerror;
     }
 }

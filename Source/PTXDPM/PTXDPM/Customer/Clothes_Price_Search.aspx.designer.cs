@@ -7,63 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTXDPM.UseCotrol {
+namespace PTXDPM.Customer {
     
     
-    public partial class HeadRight {
+    public partial class Clothes_Price_Search {
         
         /// <summary>
-        /// lbLogin control.
+        /// lblTongsoHH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbLogin;
+        protected global::System.Web.UI.WebControls.Label lblTongsoHH;
         
         /// <summary>
-        /// lbRegister control.
+        /// grdDSHH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbRegister;
+        protected global::System.Web.UI.WebControls.GridView grdDSHH;
         
         /// <summary>
-        /// lbTongTien control.
+        /// lblerror control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTongTien;
+        protected global::System.Web.UI.WebControls.Label lblerror;
         
         /// <summary>
-        /// lbSoLuong control.
+        /// grdDSHH1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSoLuong;
-        
-        /// <summary>
-        /// txtsearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsearch;
-        
-        /// <summary>
-        /// btn_search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btn_search;
+        protected global::System.Web.UI.WebControls.DataList grdDSHH1;
     }
 }

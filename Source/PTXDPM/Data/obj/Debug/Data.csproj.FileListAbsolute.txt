@@ -8,3 +8,7 @@ C:\Users\sunny\Desktop\PTXDPM\Data\bin\Debug\Data.pdb
 C:\Users\sunny\Desktop\PTXDPM\Data\obj\Debug\Data.dll
 C:\Users\sunny\Desktop\PTXDPM\Data\obj\Debug\Data.pdb
 C:\Users\sunny\Desktop\PTXDPM\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Mr_Dat\Desktop\Clothes\Source\PTXDPM\Data\bin\Debug\Data.dll
+C:\Users\Mr_Dat\Desktop\Clothes\Source\PTXDPM\Data\bin\Debug\Data.pdb
+C:\Users\Mr_Dat\Desktop\Clothes\Source\PTXDPM\Data\obj\Debug\Data.dll
+C:\Users\Mr_Dat\Desktop\Clothes\Source\PTXDPM\Data\obj\Debug\Data.pdb

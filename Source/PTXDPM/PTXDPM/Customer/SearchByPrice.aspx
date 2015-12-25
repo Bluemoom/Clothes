@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="GroupCloth.aspx.cs" Inherits="PTXDPM.Customer.GroupCloth" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="special">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Site.Master" AutoEventWireup="true" CodeBehind="SearchByPrice.aspx.cs" Inherits="PTXDPM.Customer.SearchByPrice" EnableEventValidation="false" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="special">
         <div class="container">
             <h3>Sản phẩm mới</h3>
         </div>
@@ -8,7 +8,7 @@
             <asp:DataList ID="listproduct" runat="server" RepeatColumns="4" Width="100%" RepeatDirection="Horizontal">
                 <ItemTemplate>
                     <div class="showProduct">
-                        <a href="ClothDetail.aspx?ID=<%#Eval("ID") %>">
+                        <a href="DetailClothes.aspx?ID=<%#Eval("ID") %>">
                             <img src="<%#Eval("Images") %>" class="img-responsive" alt=""></a>
                         <!-- Load trang chi tiet va hinh anh tu database vao day -->
                         <div class="special-info grid_1 simpleCart_shelfItem">
@@ -27,5 +27,5 @@
                 </ItemTemplate>
             </asp:DataList>
         </div>
-    </div>
+        </div>
 </asp:Content>

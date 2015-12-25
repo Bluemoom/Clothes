@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeadRight.ascx.cs" Inherits="PTXDPM.UseCotrol.HeadRight" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeadRight.ascx.cs" Inherits="PTXDPM.UseCotrol.HeadRight"  %>
 <div class="header_right">
     <div class="rgt-bottom">
         <div class="log">
@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="reg">
-            <a href="/Customer/Login.aspx"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="/Customer/Register.aspx"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a><a href="/Customer/Home.aspx?state=1"><asp:Label ID="lbDangXuat" runat="server" Text="ĐĂNG XUẤT"></asp:Label></a>
+            <a href="/Customer/Login.aspx"><asp:Label ID="lbLogin" runat="server" Text="ĐĂNG NHẬP"></asp:Label></a> | <a href="/Customer/Register.aspx"><asp:Label ID="lbRegister" runat="server" Text="ĐĂNG KÝ"></asp:Label></a>
         </div>
         <div class="cart box_1">
             <a href="/Customer/BagDetail.aspx"
@@ -22,9 +22,10 @@
         <div class="clearfix"></div>
     </div>
     <div class="search">
-            <input type="text" value="" width ="200px" placeholder="search...">
+           <%-- <input type="text" name="txtsearch" value="" width ="200px" runat="server" placeholder="search...">  --%>    
+        <asp:TextBox ID="txtsearch" runat="server" Text="Tìm kiếm..." Width="200px"></asp:TextBox>
             <div class="create_btn">
-            <a href="/Customer/BagDetail.aspx">Search</a>
+                <asp:ImageButton ID="btn_search" runat="server" CommandName="TimKiem" Height="38px" ImageUrl="~/Customer/Images/search.png" OnCommand="btn_search_Command" Width="60px" />
         </div>
 
     </div>
