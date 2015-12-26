@@ -191,7 +191,7 @@
         </tr>
         <tr>
             <td class="auto-style1" style="border: thick solid #f5f5f5; font-size: 14px">
-                <asp:HyperLink ID="HyperLink2" runat="server">QUẢN LÝ ĐẶT HÀNG</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/OrderManagement.aspx">QUẢN LÝ ĐẶT HÀNG</asp:HyperLink>
             </td>
         </tr>
     </table>
