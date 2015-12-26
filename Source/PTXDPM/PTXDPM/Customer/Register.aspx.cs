@@ -26,7 +26,7 @@ namespace PTXDPM.Customer
             }
             else
             {
-                customer.CreateCustomer(txtHoTen.Text, txtEmail.Text, txtDiaChi.Text, txtSĐT.Text, txtTenDangNhap.Text, txtMatKhau.Text);
+                customer.Register(txtHoTen.Text, txtEmail.Text, txtDiaChi.Text, txtSĐT.Text, txtTenDangNhap.Text, txtMatKhau.Text);
                 DisplayFinish();
             }
         }

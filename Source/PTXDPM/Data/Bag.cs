@@ -27,16 +27,16 @@ namespace Data
         public void AddCloth(string _id)
         {
             int temp = 1;
+            // Kiểm tra nếu Cloth đã tồn tại thì tăng số lượng
             foreach (Cloth item in listClothes)
             {
-                //Neu clothes da ton tai thi tang so luong
                 if (item.id == _id)
                 {
                     item.quantity = (int.Parse(item.quantity) + 1).ToString();
                     temp = 0;
                 }
             }
-            //Neu clothes chua ton tai thi them moi clothes
+            //Nếu chưa tồm tại thì thêm mới
             if (temp == 1)
             {
                 Cloth temp1 = new Cloth(_id);

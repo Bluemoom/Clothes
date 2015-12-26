@@ -57,9 +57,6 @@ namespace Data
             
 
         }
-        public void PrintOrder()
-        { }
-
 
         // Hiển thị danh sách đơn đặt hàng
         public DataTable ShowListOrder()

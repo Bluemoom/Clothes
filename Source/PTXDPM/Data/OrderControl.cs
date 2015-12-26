@@ -30,40 +30,6 @@ namespace Data
             this.chonseCloth = _chonseClothes;
         }
 
-        // Tìm kiếm danh sách Clothes theo nhiều trường
-        public DataTable ShowClothByOptions(int _c,string _ColorID, string _sizeID, string _pricemin,string _pricemax )
-        {
-            ConnectDB db = new ConnectDB();
-            if (_c ==1)
-            {   
-                SqlParameter[] a = new SqlParameter[3];
-                a[0] = new SqlParameter("@Top", "");
-                a[1] = new SqlParameter("@where", "ColorID =" + _ColorID);
-                a[2] = new SqlParameter("@order", "[Order] Desc");
-                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
-                return dt;
-            }
-            if(_c==2)
-            {
-                SqlParameter[] a = new SqlParameter[3];
-                a[0] = new SqlParameter("@Top", "");
-                a[1] = new SqlParameter("@where", "SizeID =" + _sizeID);
-                a[2] = new SqlParameter("@order", "[Order] Desc");
-                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
-                return dt;
-            }
-            if(_c==3)
-            {
-                SqlParameter[] a = new SqlParameter[3];
-                a[0] = new SqlParameter("@Top", "");
-                a[1] = new SqlParameter("@where", "PriceOut >=" + _pricemin+" and PriceOut<="+_pricemax);
-                a[2] = new SqlParameter("@order", "[Order] Desc");
-                DataTable dt = db.ReturnDataTable("Clothes_SelectByTop", a);
-                return dt;
-            }
-            return null;
-        }
-
         // Hàm lấy danh sách sản phẩm mới truyền vào số lượng sản phẩm muốn lấy
         public DataTable ShowNewCloth(int _sl)
         {
@@ -104,7 +70,7 @@ namespace Data
         public void CreateOrder(string _name,string _email,string _address,string _phonenumber)
         {
             string date = "";
-            customer = new Customer(_name, _email, _address, _phonenumber);
+            customer = customer.CreateCustomer(_name, _email, _address, _phonenumber);
             order = new Order(bag, customer, date);
         }
 

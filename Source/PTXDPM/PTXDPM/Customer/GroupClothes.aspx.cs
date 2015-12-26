@@ -21,7 +21,6 @@ namespace PTXDPM.Customer
                 ConnectDB db = new ConnectDB();
                 ViewState["id"] = Request.QueryString["id"];
                 ViewState["Name"] = Request.QueryString["Name"];
-                lbGroupName.Text = db.GetData("Select Name from GroupClothes where id = ", "Name", ViewState["id"].ToString());
                 if (ViewState["id"] != null)
                 {
                     listproduct.DataSource = clo.showdata(Convert.ToInt32(ViewState["id"]));

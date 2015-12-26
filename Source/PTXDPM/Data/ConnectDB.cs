@@ -28,15 +28,6 @@ namespace Data
             }
         }
 
-        // Thuc Thi Cau Lenh Sql khong co tham so truyen vao
-        public static int ThucThiCauLenhSQL(string strSQL)
-        {
-            MoKetNoi();
-            SqlCommand sqlcmd = new SqlCommand(strSQL, connect);
-            int kt = sqlcmd.ExecuteNonQuery();
-            return kt;
-            DongKetNoi();
-        }
 
         // Thực thi câu lệnh sql có tham số truyền vào
         public int ExecuteCommand(string query, SqlParameter[] param)
@@ -51,14 +42,6 @@ namespace Data
             DongKetNoi();
         }
 
-        // Thực thi proceduce không có tham số truyền vào
-        public int ExecuteCommand_NonParameter(string strSQL)
-        {
-            SqlCommand sqlcmd = new SqlCommand(strSQL, connect);
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            int kt = sqlcmd.ExecuteNonQuery();
-            return kt;
-        }
 
         // Lấy dữ liệu lên bảng truyền vào proceduce và Parametter
         public DataTable ReturnDataTable(string strSQL, SqlParameter[] a)

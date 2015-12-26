@@ -34,7 +34,7 @@ namespace Data
         }
 
         // Hàm khởi tạo cho trường hợp khách hàng không đăng ký tài khoản
-        public Customer(string _name, string _email, string _address, string _phoneNumber)
+        public Customer CreateCustomer(string _name, string _email, string _address, string _phoneNumber)
         {
             this.name = _name;
             this.email = _email;
@@ -54,6 +54,8 @@ namespace Data
             db.ExecuteCommand("Customer_Insert", a);
             string customerID = db.GetData("Select Top 1 ID from [dbo].[Customer] order by ID desc", "ID", "");
             this.id = customerID;
+            this.rule = "0";
+            return this;
         }
 
         public int CheckLogin(string usename, string password)
@@ -101,7 +103,7 @@ namespace Data
             return customer;
         }
 
-        public int CreateCustomer(string _name, string _email, string _address, string _phoneNumber, string _userName, string _password)
+        public int Register(string _name, string _email, string _address, string _phoneNumber, string _userName, string _password)
         {
             //Thêm mới Customer vào CSDL
             ConnectDB db = new ConnectDB();

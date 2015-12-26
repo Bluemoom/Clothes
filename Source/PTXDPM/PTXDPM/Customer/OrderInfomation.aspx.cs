@@ -30,16 +30,8 @@ namespace PTXDPM.Customer
 
         protected void btnDatHang_Click(object sender, EventArgs e)
         {  
-            if (orderControl.bag== null)
-            {
-                //Thông báo chưa mua hàng
-            }
-            else
-            {
-            }
-
            if(Session["Customer"]==null)
-            orderControl.customer = new Data.Customer(txtHoTen.Text, txtEmail.Text, txtDiaChi.Text, txtSĐT.Text);
+            orderControl.customer = orderControl.customer.CreateCustomer(txtHoTen.Text, txtEmail.Text, txtDiaChi.Text, txtSĐT.Text);
             orderControl.order = new Data.Order(orderControl.bag, orderControl.customer, DateTime.Now.ToString());
             Session["Bag"] = null;
             Response.Redirect("FinishOrder.aspx");
