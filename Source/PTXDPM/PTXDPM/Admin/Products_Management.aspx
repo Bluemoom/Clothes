@@ -20,96 +20,96 @@
                         </td>
                         <td class="auto-style21" style="border: thin solid #f5f5f5">MÀU ID</td>
                         <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
-                            <asp:DropDownList ID="drcolorid" runat="server" DataSourceID="SqlDataSource3" Height="22px" Width="101px">
+                            <asp:DropDownList ID="drcolorid" runat="server" DataSourceID="SqlDataSource3" Height="22px" Width="101px" DataTextField="Name" DataValueField="ID">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Color]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style23" style="border: thin solid #f5f5f5">TÊN</td>
-                        <td class="auto-style24" style="border: thin solid #f5f5f5">
+                        <td class="auto-style23" style="border: thin solid #f5f5f5; height: 49px;">TÊN</td>
+                        <td class="auto-style24" style="border: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtname" runat="server" Width="191px"></asp:TextBox>
                         </td>
-                        <td class="auto-style25" style="border: thin solid #f5f5f5">SIZE ID</td>
-                        <td class="auto-style26" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
-                            <asp:DropDownList ID="drsizeid" runat="server" DataSourceID="SqlDataSource4" Height="22px" Width="101px">
+                        <td class="auto-style25" style="border: thin solid #f5f5f5; height: 49px;">SIZE ID</td>
+                        <td class="auto-style26" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
+                            <asp:DropDownList ID="drsizeid" runat="server" DataSourceID="SqlDataSource4" Height="22px" Width="101px" DataTextField="Name" DataValueField="ID">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Size]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style27" style="border: thin solid #f5f5f5">NHÓM SẢN PHẨM</td>
-                        <td class="auto-style28" style="border: thin solid #f5f5f5">
-                            <asp:DropDownList ID="drgroupclothes" runat="server" DataSourceID="SqlDataSource2" DataTextField="ID" Height="22px" Width="118px">
+                        <td class="auto-style27" style="border: thin solid #f5f5f5; height: 49px;">NHÓM SẢN PHẨM</td>
+                        <td class="auto-style28" style="border: thin solid #f5f5f5; height: 49px;">
+                            <asp:DropDownList ID="drgroupclothes" runat="server" DataSourceID="SqlDataSource2" DataTextField="Name" Height="22px" Width="118px" DataValueField="ID">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [GroupClothes]"></asp:SqlDataSource>
                         </td>
-                        <td class="auto-style29" style="border: thin solid #f5f5f5">HÌNH ẢNH</td>
-                        <td class="auto-style17" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
+                        <td class="auto-style29" style="border: thin solid #f5f5f5; height: 49px;">HÌNH ẢNH</td>
+                        <td class="auto-style17" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
                             <asp:FileUpload ID="uphinh" runat="server" Width="258px" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style19" style="border: thin solid #f5f5f5">MÔ TẢ</td>
-                        <td class="auto-style20" style="border: thin solid #f5f5f5">
+                        <td class="auto-style19" style="border: thin solid #f5f5f5; height: 49px;">MÔ TẢ</td>
+                        <td class="auto-style20" style="border: thin solid #f5f5f5; height: 49px;">
                            
                             <asp:TextBox ID="txtdescription" runat="server" Width="290px"></asp:TextBox>
                            
-                        <td class="auto-style21" style="border: thin solid #f5f5f5">CHẤT LIỆU ID</td>
-                        <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
-                            <asp:DropDownList ID="drmaterialid" runat="server" DataTextField="ID" DataSourceID="SqlDataSource5" Height="22px">
+                        <td class="auto-style21" style="border: thin solid #f5f5f5; height: 49px;">CHẤT LIỆU ID</td>
+                        <td class="auto-style22" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
+                            <asp:DropDownList ID="drmaterialid" runat="server" DataTextField="Name" DataSourceID="SqlDataSource5" Height="22px" DataValueField="ID">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ClothConnectionString %>" SelectCommand="SELECT * FROM [Material]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style19" style="border: thin solid #f5f5f5">GIÁ NHẬP</td>
-                        <td class="auto-style20" style="border: thin solid #f5f5f5">
+                        <td class="auto-style19" style="border: thin solid #f5f5f5; height: 49px;">GIÁ NHẬP</td>
+                        <td class="auto-style20" style="border: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtpricein" runat="server" Width="79px"></asp:TextBox>
                         </td>
-                        <td class="auto-style21" style="border: thin solid #f5f5f5">SỐ LƯỢNG</td>
-                        <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
+                        <td class="auto-style21" style="border: thin solid #f5f5f5; height: 49px;">SỐ LƯỢNG</td>
+                        <td class="auto-style22" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtquantity" runat="server" Width="55px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style19" style="border: thin solid #f5f5f5">GIÁ BÁN</td>
-                        <td class="auto-style20" style="border: thin solid #f5f5f5">
+                        <td class="auto-style19" style="border: thin solid #f5f5f5; height: 49px;">GIÁ BÁN</td>
+                        <td class="auto-style20" style="border: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtpriceout" runat="server" Width="79px"></asp:TextBox>
                         </td>
-                        <td class="auto-style21" style="border: thin solid #f5f5f5">TRẠNG THÁI</td>
-                        <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
+                        <td class="auto-style21" style="border: thin solid #f5f5f5; height: 49px;">TRẠNG THÁI</td>
+                        <td class="auto-style22" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtstatus" runat="server" Width="100px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style19" style="border: thin solid #f5f5f5">GIÁ MỚI</td>
-                        <td class="auto-style20" style="border: thin solid #f5f5f5">
+                        <td class="auto-style19" style="border: thin solid #f5f5f5; height: 49px;">GIÁ MỚI</td>
+                        <td class="auto-style20" style="border: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtnewprice" runat="server" Width="79px"></asp:TextBox>
                         </td>
-                        <td class="auto-style21" style="border: thin solid #f5f5f5">ĐẶT HÀNG</td>
-                        <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
+                        <td class="auto-style21" style="border: thin solid #f5f5f5; height: 49px;">ĐẶT HÀNG</td>
+                        <td class="auto-style22" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtorder" runat="server" Width="100px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style19" style="border: thin solid #f5f5f5">GIỚI TÍNH</td>
-                        <td class="auto-style18" style="border: thin solid #f5f5f5">
+                        <td class="auto-style19" style="border: thin solid #f5f5f5; height: 49px;">GIỚI TÍNH</td>
+                        <td class="auto-style18" style="border: thin solid #f5f5f5; height: 49px;">
                             <asp:DropDownList ID="drsex" runat="server" Height="22px" Width="101px">
-                                <asp:ListItem Value="Nam"></asp:ListItem>
-                                <asp:ListItem Value="Nữ"></asp:ListItem>
+                                <asp:ListItem>0</asp:ListItem>
+                                <asp:ListItem>1</asp:ListItem>
                             </asp:DropDownList>
                         </td>
-                        <td class="auto-style21" style="border: thin solid #f5f5f5">NEW</td>
-                        <td class="auto-style22" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;">
+                        <td class="auto-style21" style="border: thin solid #f5f5f5; height: 49px;">NEW</td>
+                        <td class="auto-style22" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;">
                             <asp:TextBox ID="txtnew" runat="server" Width="42px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style32" colspan="4" style="border-style: solid; border-width: thin thick thin thin; border-color: #f5f5f5;"><span class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                        <td class="auto-style32" colspan="4" style="border-left: thin solid #f5f5f5; border-right: thick solid #f5f5f5; border-top: thin solid #f5f5f5; border-bottom: thin solid #f5f5f5; height: 49px;"><span class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                             <asp:Button ID="btnluu" runat="server" Text="LƯU" Width="80px" OnClick="btnluu_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnhuy" runat="server" Text="HỦY" Width="80px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnhuy" runat="server" Text="HỦY" Width="80px" OnClick="btnhuy_Click" />
                         </td>
                     </tr>
                     <tr>
@@ -117,9 +117,10 @@
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                                 DataKeyNames="ID" DataSourceID="SqlDataSource1" BackColor="White" 
                                 BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" 
-                                GridLines="Vertical" AllowPaging="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" PageSize="5">
+                                GridLines="Vertical" AllowPaging="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" PageSize="5" style="margin-top: 17px">
                                 <AlternatingRowStyle BackColor="White" />
                                 <Columns>
+                                    <asp:CommandField ShowEditButton="True" />
                                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                                     <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                                     <asp:BoundField DataField="GroupClothesID" HeaderText="GroupClothes" SortExpression="GroupClothesID" />
@@ -174,7 +175,7 @@
                                 </UpdateParameters>
 
                                 <DeleteParameters>
-                                    <asp:Parameter Name="ID" Type ="String" />
+                                    <asp:Parameter Name="ID" Type ="int32" />
                                 </DeleteParameters>
 
                             </asp:SqlDataSource>

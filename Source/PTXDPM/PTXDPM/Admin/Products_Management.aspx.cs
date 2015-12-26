@@ -13,7 +13,7 @@ namespace PTXDPM.Admin
 {
     public partial class Products_Management : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Clothes;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Cloth;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,7 +34,7 @@ namespace PTXDPM.Admin
             string filename;
             if (uphinh.FileName != "")
             {
-                filename = Server.MapPath("~/Customer/assets/images/" + uphinh.FileName);
+                filename = Server.MapPath("../Customer/Images/" + uphinh.FileName);
                 uphinh.PostedFile.SaveAs(filename);
             }
         }
@@ -111,6 +111,19 @@ namespace PTXDPM.Admin
             {
                 showMessage("Đã tồn tại mã sản phẩm! Mời nhập lại");
             }
+        }
+
+        protected void btnhuy_Click(object sender, EventArgs e)
+        {
+            txtname.Text = "";
+            txtdescription.Text = "";
+            txtpricein.Text = "";
+            txtpriceout.Text = "";
+            txtnewprice.Text = "";
+            txtquantity.Text = "";
+            txtstatus.Text = "";
+            txtorder.Text = "";
+            txtnew.Text = "";
         }
     }
 
